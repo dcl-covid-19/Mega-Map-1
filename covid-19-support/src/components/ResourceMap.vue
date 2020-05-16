@@ -156,7 +156,6 @@ export default {
 <style scoped lang="css">
 .map {
   flex: 1 1 100%;
-  height: 100%;
   width: 100%;
   padding: 0;
   z-index: 1;
