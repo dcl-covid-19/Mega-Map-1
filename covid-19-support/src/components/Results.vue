@@ -55,7 +55,7 @@ export default {
   data() {
     return {
       entries: null,
-      mapUrl: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png',
+      mapUrl: 'https://api.mapbox.com/styles/v1/stanford-datalab/ckad39evg02u11ijqeghbn0u0/tiles/{z}/{x}/{y}?access_token=',
       bounds: null,
       centroid: [null, null],
       resourceData: { resourceId: null, isSetByMap: false },
