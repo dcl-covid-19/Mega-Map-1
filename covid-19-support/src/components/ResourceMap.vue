@@ -23,8 +23,7 @@
           </div>
         </div>
       </l-control>
-      <l-tile-layer :url="mapUrl" :attribution="attribution" />
-
+      <l-tile-layer :url="mapUrl" :tileSize: 512 zoomOffset: -1 attribution: '© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'/>
       <v-marker-cluster ref="marks" :options="clusterOptions">
         <!-- @clusterclick="click()" @ready="ready" -->
         <l-marker
