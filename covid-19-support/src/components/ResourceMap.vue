@@ -1,5 +1,6 @@
 <template>
   <div class="map">
+    <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
     <l-map
       ref="covidMap"
       v-if="showMap"
@@ -111,7 +112,7 @@ export default {
     },
     editZoomControl() {
       const zoomControl = this.$el.querySelector('.leaflet-top.leaflet-left')
-      zoomControl.className = 'leaflet-bottom leaflet-left'
+      zoomControl.className = 'leaflet-top leaflet-left'
     },
     latLng,
     selectedIcon(selected, item) {
