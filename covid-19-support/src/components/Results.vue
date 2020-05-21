@@ -27,6 +27,7 @@
           :markers="markers"
           :resource="resourceData"
           @resource-selected="passSelectedMarker"
+          @resource-unselected="unselectResource"
           @reset-zoom="resetZoom"
           @zoom-out="zoomOut"
           :displayMap="displayMap"
@@ -65,7 +66,8 @@ export default {
       resourceData: { resourceId: null, isSetByMap: false },
       activeFilters: [],
       zoomDiff: 0,
-      zoomReset: false
+      zoomReset: false,
+      mapMoved: false
     }
   },
   created() {
@@ -87,8 +89,17 @@ export default {
     boxSelected: function (filter) {
       this.activeFilters = addOrRemove(this.activeFilters, filter)
     },
+    isCenteredOn(marker) {
+      return marker && Math.abs(marker.lat - this.centroid[0]) < 0.0001 && Math.abs(marker.lon - this.centroid[1]) < 0.0001
+    },
     centerUpdated(center) {
       this.centroid = [center.lat, center.lng]
+      if (!this.isCenteredOn(this.currentBusiness)) {
+        this.mapMoved = true
+      }
+      if (this.isCenteredOn(this.nearLatLonZoom)) {
+        this.mapMoved = false
+      }
     },
     boundsUpdated: function (bounds) {
       this.bounds = bounds
@@ -104,6 +115,11 @@ export default {
     resetZoom() {
       this.zoomReset = true
       this.$nextTick(() => (this.zoomReset = false))
+    },
+    unselectResource() {
+      if (!this.mapMoved) {
+        this.resetZoom()
+      }
     },
     scroll(offset) {
       if (this.displayMap) {

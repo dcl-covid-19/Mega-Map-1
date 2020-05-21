@@ -135,10 +135,12 @@ export default {
       return item[field]
     },
     resourceClicked(item) {
-      if (!this.resource.resourceId || item.cartodb_id != this.resource.resourceId) {
+      if (!this.resource.resourceId || item.cartodb_id != this.resource.resourceId || !this.showDetails) {
+        this.showDetails = true
         this.$emit('resource-selected', { resourceId: item.cartodb_id, isSetByMap: false })
       } else {
-        this.showDetails = !this.showDetails
+        this.showDetails = false
+        this.$emit('resource-unselected')
       }
     },
     zoomOut() {
