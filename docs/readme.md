@@ -51,7 +51,7 @@ please contact [hi@bayareacommunity.org](mailto:hi@bayareacommunity.org).
 ## Volunteers 
 
 This project would not be possible without our amazing data entry, design
-and translator volunteers! There are many more of you to thank, but 
+and translator volunteers and advisors! There are many more of you to thank, but 
 here are only a few of your names. Thank you.
 
 - Michael Alisky
@@ -60,6 +60,7 @@ here are only a few of your names. Thank you.
 - Angela Chau
 - Rachel Chang
 - Trillium Chang
+- Charles Cho
 - Taylor Evensen
 - Celine Gadingco
 - Stanley Gu
@@ -67,6 +68,8 @@ here are only a few of your names. Thank you.
 - Grace Hung
 - Rachel Koo
 - Jina Lee
+- Ngozi Nezianya
+- Heather Nguyen
 - Ashwin Reddy
 - Micah Trautwein
 - Songnan Wang
