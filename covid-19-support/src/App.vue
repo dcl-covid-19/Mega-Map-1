@@ -1,173 +1,89 @@
 <template>
   <div class="home">
-    <app-header :language="language.name" @language-selected="changeLanguage" />
-    <!-- <about-us-modal /> -->
-    <div class="d-flex" id="wrapper" :class="{ toggled: isFilterOpen }" v-if="!!entries">
-      <search-filter
-        :isFilterOpen="isFilterOpen"
+    <app-header :language="language.name" @language-selected="changeLanguage" @toggled-nav-bar="toggleNavBar" />
+    <div class="intro" :class="{ 'intro-centered': initialSearch }">
+      <template v-if="initialSearch">
+        <h4 class="introParagraph">{{ $t('about.front-page.p1') }}</h4>
+        <p class="introParagraph">{{ $t('about.front-page.p2') }}</p>
+      </template>
+      <search
         :need="need"
-        :day="day"
-        :filteredMarkers="filteredMarkers"
-        :highlightFilteredMarkers="highlightFilteredMarkers"
-        :location="locationData"
-        :show-list="showList"
-        @location-selected="passLocation"
-        @toggle="isFilterOpen = !isFilterOpen"
+        :nearLocation="nearLocation"
+        :userLocation="userLocation"
+        :isInitialSearch="initialSearch"
         @need-selected="needSelected"
-        @day-selected="daySelected"
+        @near-location-selected="nearLocationSelected"
+        v-if="showSearchBar"
       />
-
-      <div id="page-content-wrapper">
-        <highlights
-          :need="need"
-          :class="{ toggled: isFilterOpen }"
-          :filteredMarkers="highlightFilteredMarkers"
-          :highlightFilters="highlightFilters"
-          @box-selected="boxSelected"
-        />
-
-        <resource-map
-          :filteredMarkers="filteredMarkers"
-          :class="{ noselection: need == 'none' }"
-          :location="locationData"
-          @location-selected="passLocation"
-          @bounds="boundsUpdated"
-          @center="centerUpdated"
-          :mapUrl="mapUrl"
-          :userLocation="userLocation"
-        />
-      </div>
+      <template v-if="initialSearch">
+        <p class="introParagraph introParagraph-light">{{ $t('about.front-page.p3') }}</p>
+      </template>
     </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import AppHeader from './components/Header.vue'
-import SearchFilter from './components/SearchFilter.vue'
-import Highlights from './components/Highlights.vue'
-import ResourceMap from './components/ResourceMap.vue'
-// import AboutUsModal from './components/AboutUs.vue'
-import { latLng } from 'leaflet'
-// import { haversineDistance } from './utilities'
-import { haversineDistance, sortByDistance } from './utilities'
-
-// import { spreadsheetUrl, weekdays, dayFilters, booleanFilters, dayAny } from './constants'
-import { spreadsheetUrl, dayFilters, booleanFilters, dayAny, complexFilters } from './constants'
-
-function extend(obj, src) {
-  for (var key in src) {
-    obj.push(src[key])
-  }
-  return obj
-}
-
-function addOrRemove(array, item) {
-  const exists = array.includes(item)
-
-  if (exists) {
-    return array.filter((c) => {
-      return c !== item
-    })
-  } else {
-    const result = array
-    result.push(item)
-    return result
-  }
-}
-
+import AppHeader from '@/components/Header.vue'
+import Search from '@/components/Search.vue'
+import { needs } from '@/constants'
 export default {
   name: 'app',
   props: {
     msg: String
   },
-  watch: {
-    currentPage: 'fetchData'
-  },
   created() {
     // Get user location
-    this.getUserLocation()
-    // Get all data
-    this.fetchData()
+    // this.getUserLocation()
+    if (this.$route.path == '/') {
+      this.initialSearch = true
+    } else {
+      this.initialSearch = false
+    }
+    if (this.$route.params && this.$route.params.need) {
+      this.need = this.$route.params.need
+    }
+    if (this.$route.query && this.$route.query.near) {
+      this.nearLocation = this.$route.query.near
+    }
   },
   components: {
     AppHeader,
-    Highlights,
-    SearchFilter,
-    ResourceMap
-    // AboutUsModal
+    Search
   },
   data() {
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     return {
-      entries: null,
-      need: 'none',
-      day: dayAny,
-      isFilterOpen: true,
+      need: null,
       language: { name: 'English', iso: 'en' },
-      locationData: { locValue: null, isSetByMap: false },
-      showList: false,
-      highlightFilters: [],
-      bounds: null,
-      centroid: [35.91371, -79.057919],
       darkModeMediaQuery: darkModeMediaQuery,
       darkMode: darkModeMediaQuery.matches,
-      mapUrl: '',
+      nearLocation: null,
       userLocation: { lat: null, lon: null },
-      errorStr: null
+      errorStr: null,
+      initialSearch: false,
+      isNavBarOpen: false
     }
   },
-  mounted() {
-    this.mapUrl = this.darkMode
-      ? 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-      : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    this.darkModeMediaQuery.addListener((e) => {
-      this.darkMode = e.matches
-      this.mapUrl = this.darkMode
-        ? 'https://{s}.basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png'
-        : 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png'
-    })
-  },
   methods: {
-    centerUpdated(center) {
-      this.centroid = [center.lat, center.lng]
-    },
-    boundsUpdated: function (bounds) {
-      this.bounds = bounds
-    },
-    getDay: function (day) {
-      if (day == 0) {
-        return 6
-      } else {
-        return day - 1
-      }
-    },
-    boxSelected: function (content) {
-      this.highlightFilters = addOrRemove(this.highlightFilters, content.need)
-    },
-    isAnyDaySelected(day) {
-      return day >= dayAny
-    },
     needSelected: function (val) {
       this.need = val
-      this.highlightFilters = []
+      if (this.nearLocation) {
+        this.$router.push({ path: this.need, query: { near: this.nearLocation } })
+        this.initialSearch = false
+      }
       // window.gtag('event', 'What do you need?', { event_category: 'Search - (' + this.language.name + ')', event_label: val })
     },
-    daySelected: function (val) {
-      this.day = val
-      this.highlightFilters = []
-      // window.gtag('event', 'When do you need it?', {
-      //   event_category: 'Search - (' + this.language.name + ')',
-      //   event_label: weekdays[this.getDay(val)].day
-      // })
+    nearLocationSelected: function (val) {
+      this.nearLocation = val
+      if (this.nearLocation && this.need) {
+        this.$router.push({ path: this.need, query: { near: this.nearLocation } })
+        this.initialSearch = false
+      }
     },
     changeLanguage: function (item) {
       this.language = item
       this.$root.updateLang(item.iso)
-    },
-    async fetchData() {
-      const res = await fetch(spreadsheetUrl)
-      const entries = await res.json()
-      this.entries = entries.feed.entry
     },
     async getUserLocation() {
       try {
@@ -188,98 +104,91 @@ export default {
         )
       })
     },
-    passLocation: function (val) {
-      this.locationData = val
-      this.showList = false
-      this.isFilterOpen = true
-      // var proName = this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
-      //   ? ', ' + this.filteredMarkers[val.locValue].marker.gsx$provideraddloc.$t
-      //   : ''
-
-      //   window.gtag('event', val.isSetByMap ? 'Marker clicked' : 'List item clicked', {
-      //     event_category: 'View details - (' + this.language.name + ')',
-      //     event_label: this.filteredMarkers[val.locValue].marker.gsx$providername.$t + proName
-      //   })
+    toggleNavBar(navBarState) {
+      this.isNavBarOpen = navBarState
     }
   },
   computed: {
-    filteredMarkers() {
-      if (this.entries == null) return null
-
-      var markers
-
-      if (this.need == 'family') {
-        markers = this.entries.filter((c) => c.gsx$familymeal.$t == 1 && c.gsx$status.$t == '1')
-      } else if (this.need == 'free_grocery') {
-        markers = this.entries.filter((c) => c.gsx$resource.$t == 'grocery' && c.gsx$status.$t == '1' && c.gsx$free.$t == '1')
-      } else if (this.need == 'snap_wic_retailer') {
-        markers = this.entries.filter((c) => c.gsx$resource.$t == 'grocery' && c.gsx$status.$t == '1' && c.gsx$free.$t == '0')
+    showSearchBar() {
+      if (this.$route.name == 'AboutUs') {
+        return false
+      }
+      return !this.isNavBarOpen || this.initialSearch
+    }
+  },
+  watch: {
+    $route(to) {
+      // update need based on route
+      if (to.path == '/') {
+        this.initialSearch = true
+        this.need = null
+        this.nearLocation = null
       } else {
-        markers = this.entries.filter(
-          (c) => c.gsx$resource.$t === this.need && c.gsx$status.$t == '1' && c.gsx$lat.$t != 'error' && c.gsx$lon.$t != 'error'
-        )
-      }
-
-      // Filter out the boolean items
-      this.highlightFilters.forEach((element) => {
-        if (booleanFilters.includes(element)) {
-          markers = markers.filter((c) => c['gsx$' + element].$t == '1')
+        console.log(to)
+        if (!needs.includes(to.params.need) && to.path != '/about-us') {
+          this.$router.push('/')
+        } else {
+          this.initialSearch = false
+          if (to.params.need) {
+            this.need = to.params.need
+          }
+          if (to.query.near) {
+            this.nearLocation = to.query.near
+          }
         }
-      })
-
-      // Filter out items based on complexFilters
-      complexFilters.forEach((f) => {
-        if (this.highlightFilters.includes(f.name)) {
-          markers = markers.filter((c) => {
-            const bools = f.columns.map((d) => c['gsx$' + d].$t == '1')
-            return f.combine(bools)
-          })
-        }
-      })
-
-      var today = new Date().getDay()
-      var selectedDay = today
-      if (!this.isAnyDaySelected(this.day)) {
-        selectedDay = this.day
       }
-
-      const dayFilter = dayFilters[this.getDay(selectedDay)]
-      var open = markers.filter((c) => c[dayFilter].$t !== '0')
-      var closed = markers.filter((c) => c[dayFilter].$t == '0')
-
-      var retList = extend(
-        open.map((marker) => ({
-          marker,
-          oc: true,
-          distance: haversineDistance(this.centroid, [marker.gsx$lat.$t, marker.gsx$lon.$t], true)
-        })),
-        closed.map((marker) => ({
-          marker,
-          oc: false,
-          distance: haversineDistance(this.centroid, [marker.gsx$lat.$t, marker.gsx$lon.$t], true)
-        }))
-      ).sort(sortByDistance)
-
-      return retList
-    },
-    highlightFilteredMarkers() {
-      var contained = [] //makers in map boundingbox
-      this.filteredMarkers.forEach((m) => {
-        if (this.bounds.contains(latLng(m.marker.gsx$lat.$t, m.marker.gsx$lon.$t))) contained.push(m)
-      })
-
-      if (!this.isAnyDaySelected(this.day)) {
-        return contained
-      }
-
-      return contained.map((m) => {
-        let obj = Object.assign({}, m)
-        obj.oc = true
-        return obj
-      })
     }
   }
 }
 </script>
 
-<style></style>
+<style scoped lang="scss">
+h5,
+span {
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+  font-weight: 300 !important;
+  padding-top: 50px !important;
+  padding-bottom: 20px !important;
+}
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: theme-color(secondary);
+  overflow-y: scroll;
+}
+
+.intro {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 12px;
+  z-index: 99998;
+}
+
+.intro-centered {
+  margin: 10vh auto;
+}
+
+@media (min-width: 600px) {
+  .intro-centered {
+    margin: 15vh auto;
+  }
+}
+
+.introParagraph {
+  padding: 24px 8px 0;
+}
+
+.introParagraph-light {
+  color: $gray-600;
+}
+
+#search-result {
+  position: relative;
+  width: 100%;
+  flex: 1 1 auto;
+}
+</style>

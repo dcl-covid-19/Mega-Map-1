@@ -22,12 +22,17 @@ $orange: #fd7e14;
 $red: #ff2b1c;
 $teal: #2eb7cb;
 $yellow: #ffb71c;
+$coral: #f48171;
+$peach: #fdba5e;
+$purple: #53509f;
+$lilac: #a568ab;
 
 $warning: $yellow;
 $danger: $red;
 // 46c4d7
 $theme-colors: (
-  'primary': $blue,
+  'primary': $purple,
+  'primaryDark': $purple,
   'secondary': $gray-100,
   'buttons': $orange,
   'warning': $warning,
@@ -50,8 +55,8 @@ $navbar-padding-y: 0;
 // );
 $bv-enable-table-stacked: false;
 
-@include list-group-item-variant('sideNav', theme-color('secondary'), theme-color('secondaryDark'));
-@media (prefers-color-scheme: dark) {
+@include list-group-item-variant('sideNav', theme-color('primary'), theme-color('secondaryDark'));
+/* @media (prefers-color-scheme: dark) {
   @include list-group-item-variant('sideNav', theme-color('secondaryDark'), theme-color('secondary'));
   .bg-secondary {
     background-color: theme-color-level('secondary', 8) !important;
@@ -72,4 +77,4 @@ $bv-enable-table-stacked: false;
     background: $gray-900;
     color: $gray-300;
   }
-}
+} */

@@ -9,7 +9,7 @@
     "devhelp": {
       "addbusiness": "add a business",
       "addinfo": "Use our online forms to {0} or {1}.",
-      "ambassadorinfo": "Help us expand coverage across North Carolina. Ambassadors will work with local government and business associations to bring NC COVID Support to their community. Email us at {0} for tools and resources to get started.",
+      "ambassadorinfo": "Help us expand coverage across the Bay Area. Ambassadors will work with local government and business associations to bring Bay Area Community Resources to their community. Email us at {0} for tools and resources to get started.",
       "becomeambassador": "Become a community ambassador",
       "conduct": "Code of Conduct",
       "devnote": "Developers - find our {0} and {1} on GitHub.",
@@ -28,24 +28,87 @@
       "chb": "Chapel Hill Brigade",
       "farmstewards": "Carolina Farm Stewardship Association",
       "localistnc": "#LocalListNC",
-      "partnership": "Chapel Hill Downtown Partnership"
+      "partnership": "Chapel Hill Downtown Partnership",
+      "dcl": "Data Challenge Lab",
+      "bln": "Big Local News"
     },
     "partners": "Info Sources",
-    "title": "About this site"
+    "title": "About this site",
+    "front-page": {
+      "p1": "Welcome! ",
+      "p2": "We provide information on resources such as free meals, food, legal assistance, and medical help. Start by selecting where you are and what you’re looking for.",
+      "p3": "Start by selecting where you are and what you're looking for.",
+      "p4": {
+        "text": "We are affiliated with Stanford's {0} and {1} and are extremely grateful to Bill Behrman, Sara Altman, and Cheryl Phillips for their ongoing support and advice.",
+        "link0": "Data Challenge Lab",
+        "link1": "Big Local News"
+      }
+    },
+    "about-us": {
+      "header": "About Us",
+      "p1": {
+        "text": "We are a volunteer-driven, open-source project to help communities navigate the COVID crisis by providing information on public resources. This project began as a {0}, and now provides information on more resources such as locations and schedules for free meals, food assistance, legal assistance, and medical help.",
+        "link": "Bay Area school meals map"
+      },
+      "p2": {
+        "text": "The development for this project was adapted from {0}.",
+        "link": "NCCovid Support"
+      },
+      "p3": {
+        "text": "You can find more information on the project, including the source code for replicating the project, from our {0}.",
+        "link": "Github page"
+      }
+    },
+    "about-us-sources": "Our database of information benefits from data collected by the following organizations:\nUSDA SNAP Store locator\nUSDA WIC Store locator\nSecond Harvest of Silicon Valley\nStanford Pediatric Advocacy\n\nWe have a team of amazing volunteers who verify the data and collect any additional information such as additional Covid-19 senior hours, safe curbside pick-up options etc. ",
+    "about-us-contact": {
+      "link0": "hi@bayareacommunity.org"
+    },
+    "about-us-disclaimer": "This Bay Area Resources project is purely volunteer-driven. We have a team of humans collecting and verifying data from diverse sources. We do our best to keep all the information on the site as up-to-date as possible, however we cannot guarantee that the information is 100% accurate.",
+    "info-sources": {
+      "header": "Info Sources",
+      "p1": "Our database of information benefits from data collected by the following organizations:",
+      "p2": "We have a team of amazing volunteers who verify the data and collect any additional information such as additional Covid-19 senior hours, safe curbside pick-up options etc."
+    },
+    "info-source": {
+      "link1": "USDA SNAP Store locator",
+      "link2": "USDA WIC Store locator",
+      "link3": "Second Harvest of Silicon Valley",
+      "link4": "Stanford Pediatric Advocacy"
+    },
+    "contact-us": {
+      "header": "Contact Us",
+      "p1": {
+        "text": "For questions on any data additions or inaccuracies, or for any other questions, please contact {0}.",
+        "link": "hi@bayareacommunity.org"
+      }
+    },
+    "disclaimer": {
+      "header": "Disclaimer",
+      "p": "This Bay Area Resources project is purely volunteer-driven. We have a team of humans collecting and verifying data from diverse sources. We do our best to keep all the information on the site as up-to-date as possible, however we cannot guarantee that the information is 100% accurate."
+    },
+    "spthanks": {
+      "p": "Special thanks to {0} and {1} for powering our site.",
+      "link0": "CARTO",
+      "link1": "Mapbox"
+    }
   },
   "category": {
     "childcare": "Child care",
     "family": "Prepared family meal|Prepared family meals",
     "farm": "Farm or farmer market|Farms & farmers' markets",
+    "food_bev": "Speciality food & beverage",
+    "free_grocery": "Free grocery|Free groceries",
     "grocery": "Grocery|Groceries",
-    "free_grocery": "Free Grocery|Free Groceries",
     "meal": "Free prepared meal|Free prepared meals",
     "petsupplies": "Pet supplies",
     "pharmacy": "Pharmacy|Pharmacies",
     "restaurant": "Restaurant|Restaurants",
     "school": "School meal|School meals",
-    "food_bev": "Speciality food & beverage",
-    "snap_wic_retailer": "SNAP/WIC retailer|SNAP/WIC retailers"
+    "snap_wic_retailer": "SNAP/WIC retailer|SNAP/WIC retailers",
+    "food_resources": "Food resources",
+    "legal_resources": "Legal resources",
+    "medical_resources": "Medical resources",
+    "mental_health_resources": "Mental health resources"
   },
   "dayofweek": {
     "any": "Any",
@@ -61,48 +124,56 @@
     "address": "Address",
     "allweek": "All week",
     "backtolist": "Back to list",
+    "call_in_advance": "Must call in advance",
+    "children": "For children",
     "close": "Close",
     "closed": "Closed",
     "closed-on": "Closed on",
     "closed-today": "Closed Today",
     "closedonday": "Closed (on the current selected day)",
-    "curbside": "Curbside pick-up",
-    "delivery": "Delivery",
+    "curbside_pickup": "Curbside pick-up",
     "curbside_or_delivery": "Delivery or curbside pick-up",
-    "discountmedical": "Medical worker discount|Medical worker discounts",
-    "discounts": "",
-    "drivethru": "Drive thru",
+    "delivery": "Delivery",
+    "discount_medical": "Medical worker discount|Medical worker discounts",
+    "discounts": "Discounts",
+    "drive_thru": "Drive thru",
     "email": "Email",
     "email_lowercase": "email",
-    "farmersmarket": "Farmers' market|Farmers' markets",
-    "farmpickup": "On-farm pick-up",
-    "freegroceries": "Free grocery location|Free grocery locations",
+    "farmers_market": "Farmers' market|Farmers' markets",
+    "farm_pick_up": "On-farm pick-up",
     "free": "Free resource",
-    "snap": "SNAP-accepting location|SNAP-accepting locations",
-    "wic": "WIC-accepting location|WIC-accepting locations",
+    "free_groceries": "Free grocery location|Free grocery locations",
     "freemeals": "Free meal location|Free meal locations",
-    "freeproduce": "Free produce location|Free produce locations",
+    "free_produce": "Free produce location|Free produce locations",
     "instructions": "Instructions",
     "mapkey": "Map Key",
-    "mealpublic": "Meals open to public",
-    "mealstudent": "Meals for children",
-    "mustpreorder": "Must pre-order",
+    "meal_public": "Meals open to public",
+    "meal_student": "Meals for children",
+    "must_preorder": "Must pre-order",
     "normalhours": "Normal hours",
     "notes": "Notes",
     "offers": "Offers",
     "open": "Open",
     "openinghours": "Hours",
-    "orderonline": "Order & pay online",
+    "order_online": "Order & pay online",
     "phone": "Phone",
+    "public": "Open to all",
     "selectacategory": "Select a category...",
     "selected": "Selected",
     "seniorhours": "Senior hours",
-    "specialhours": "Senior shopping hours",
-    "website": "Website",
-    "callinadvance": "Must call in advance",
     "seniors": "For seniors",
-    "children": "For children",
-    "public": "Open to all"
+    "snap": "SNAP-accepting location|SNAP-accepting locations",
+    "special_hours": "Senior shopping hours",
+    "website": "Website",
+    "wic": "WIC-accepting location|WIC-accepting locations",
+    "ebt_pay_phone": "Pay with EBT over the phone",
+    " ebt_pay_online": "Pay with EBT online",
+    "open_today": "Open today",
+    "pay_phone": "Pay with EBT over the phone",
+    "safe_pick_up": "Safe pick-up options",
+    "zoom_out_for_more_results": "Zoom out for more results.",
+    "in_person": "In-person clinics",
+    "telehealth": "Telehealth assistance"
   },
   "languages": {
     "ar": "Arabic",
@@ -112,11 +183,13 @@
     "ja": "Japanese",
     "ko": "Korean",
     "ms": "Burmese",
-    "zh": "Simplified Chinese"
+    "zh": "Simplified Chinese",
+    "vi": "Vietnamese",
+    "tl": "Tagalog"
   },
   "sidebar": {
     "close-panel": "Close search panel",
-    "info-about-us": "Currently, this site supports Orange County, NC. With",
+    "info-about-us": "Currently, this site supports the Bay Area, CA. With",
     "info-end-text": ", we can expand our coverage.",
     "info-link-text": "your help",
     "open-panel": "Open search panel",
@@ -125,7 +198,42 @@
     "stayhome": "If you are sick, stay home.",
     "washhands": "Wash your hands often.",
     "what-do-you-need": "What do you need?",
-    "when-do-you-need-it": "When do you need it?"
+    "when-do-you-need-it": "When do you need it?",
+    "current_location": "Current location",
+    "what": "Resource ...",
+    "what-are-you-looking-for": "What are you looking for?",
+    "where": "Near ..."
   },
-  "title": "{0} COVID Support"
+  "title": "{0} COVID Support",
+  "county": {
+    "alameda": "Alameda county",
+    "anywhere": "Anywhere",
+    "contra-costa": "Contra Costa county",
+    "marin": "Marin county",
+    "napa": "Napa county",
+    "san-francisco": "San Francisco county",
+    "san-mateo": "San Mateo county",
+    "santa-clara": "Santa Clara county",
+    "solano": "Solano county",
+    "sonoma": "Sonoma county",
+    "monterey": "Monterey county"
+  },
+  "legal": {
+    "general_info": "General information",
+    "legal_assistance": "Legal assistance",
+    "legal_criminal": "Criminal justice support",
+    "legal_domviolence": "Domestic violence support",
+    "legal_worker_protection": "Workers' rights support",
+    "legal_healthcare": "Healthcare benefits support",
+    "legal_housing": "Housing support",
+    "legal_immigration": "Immigration support"
+  },
+  "medical": {
+    "telehealth": "Telehealth clinics"
+  },
+  "mental": {
+    "in_person": "In-person assistance"
+  },
+  "no_location_in_this_area": "No result in this area.",
+  "no_location_meet_these_criteria": "No result for these criteria."
 }

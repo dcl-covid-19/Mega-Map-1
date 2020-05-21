@@ -1,10 +1,10 @@
 <template>
   <div class="valuebox themeFont" :class="{ selected: content.selected }" @click="$emit('box-selected', { need: content.need })">
-    <div class="number">{{ content.value }}</div>
-    <div class="title" :class="{ ten: content.value > 9, hundred: content.value > 99, thousand: content.value > 999 }">
+    <div class="number">&#10003;</div>
+    <div class="title" :class="{ thousand: content.value > 999 }">
       {{ content.title }}
     </div>
-    <i class="fas" v-bind:class="content.icon" v-if="content.icon != ''"></i>
+    <!-- <i class="fas" v-bind:class="content.icon" v-if="content.icon != ''"></i> -->
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .valuebox {
   height: 50px;
   padding: 0 8px;
@@ -38,7 +38,7 @@ export default {
 }
 
 .number {
-  position: absolute;
+  /*position: absolute;*/
   left: 10px;
 }
 
@@ -52,7 +52,7 @@ export default {
   font-size: 1rem;
 }
 .title {
-  position: absolute;
+  /*position: absolute;*/
   margin-right: 24px;
   z-index: 3;
   left: 26px;
@@ -77,7 +77,7 @@ export default {
   .number {
     font-size: 2em;
     display: inline-block;
-    position: absolute;
+    /*position: absolute;*/
     top: 20px;
     left: 18px !important;
   }
@@ -94,7 +94,7 @@ export default {
   i.fas {
     font-size: 2em;
     opacity: 0.1;
-    position: absolute;
+    /*position: absolute;*/
     right: 13px;
     top: 13px;
     z-index: 2;
@@ -115,7 +115,7 @@ export default {
   }
 
   &:hover {
-    // background-color: #52aa36 !important;
+    /* background-color: #52aa36 !important;*/
     i {
       opacity: 0.3;
     }

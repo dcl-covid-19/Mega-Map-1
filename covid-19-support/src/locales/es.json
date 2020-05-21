@@ -9,7 +9,6 @@
     "devhelp": {
       "addbusiness": "agregar un negocio",
       "addinfo": "Utilice nuestros formularios en línea para {0} o {1}.",
-      "ambassadorinfo": "Ayúdenos a ampliar la cobertura en Carolina del Norte. Los embajadores trabajarán con el gobierno local y las asociaciones empresariales para brindar el apoyo de NC COVID a su comunidad. Envíenos un correo electrónico a {0} para obtener herramientas y recursos para comenzar.",
       "becomeambassador": "Conviértase en embajador de la comunidad",
       "conduct": "Código de Conducta",
       "devnote": "Desarrolladores: encuentre nuestros {0} y {1} en GitHub.",
@@ -28,21 +27,88 @@
       "chb": "Brigada de Chapel Hill",
       "farmstewards": "Asociación de administración agrícola de Carolina",
       "localistnc": "#LocalListNC",
-      "partnership": "Asociación del centro de Chapel Hill"
+      "partnership": "Asociación del centro de Chapel Hill",
+      "dcl": "Laboratorio de Retos de Datos",
+      "bln": "Noticias Locales Grandes"
     },
     "partners": "Fuentes de información",
-    "title": "Sobre este sitio"
+    "title": "Sobre este sitio",
+    "front-page": {
+      "p1": "Hola! ",
+      "p2": "Brindamos información sobre los recursos como comidas gratis, alimentos, asistencia legal, y ayuda médica. Comienza al seleccionar dónde estás y lo qué estás buscando. ",
+      "p3": "Empieza al seleccionar donde esta usted y lo que esta buscando.",
+      "p4": {
+        "text": "Estamos afiliados a {0} y {1} de Stanford y estamos extremadamente agradecidos con Bill Behrman, Sara Altman y Cheryl Phillips por su continuo apoyo y asesoramiento.",
+        "link0": "Laboratorio de Retos de Datos",
+        "link1": "Noticias Locales Grandes"
+      }
+    },
+    "about-us": {
+      "header": "Acerca de nosotros",
+      "p1": {
+        "text": "Somos un proyecto de código abierto mantenido por voluntarios para ayudar a las comunidades a navegar la crisis COVID al proporcionar información sobre recursos públicos. Este proyecto comenzó como un {0}, y ahora proporciona información sobre más recursos, como ubicaciones y horarios para comidas gratis, asistencia alimentaria, asistencia legal y asistencia médica.",
+        "link": "mapa de comidas escolares del Área de la Bahía"
+      },
+      "p2": {
+        "text": "El desarrollo de este proyecto fue adaptado de {0}.",
+        "link": "NCCovid Support"
+      },
+      "p3": {
+        "text": "Puede encontrar más información sobre el proyecto, incluido el código fuente para replicar el proyecto, en nuestra {0}.",
+        "link": "página de Github"
+      }
+    },
+    "about-us-sources": "Nuestro base de datos se beneficia de los datos recogidos por las siguientes organizaciones:\nLocalizador de las tiendas de USDA SNAP \nLocalizador de las tiendas de USDA WIC \nSecond Harvest de Silicon Valley\nStanford Pediatric Advocacy\n\nTenemos un equipo de voluntarios increíbles que verifican los datos y recopilan cualquier información adicional, como horas adicionales de Covid-19 para adultos mayores, opciones de recogida segura en la acera, etc.\n\n\n",
+    "about-us-contact": {
+      "link0": "hi@bayareacommunity.org"
+    },
+    "about-us-disclaimer": "Este proyecto de Recursos del Área de la Bahía es puramente voluntario. Tenemos un equipo de humanos que recopila y verifica los datos de diversas fuentes. Hacemos nuestro mejor esfuerzo para mantener toda la información en el sitio lo más actualizada posible, sin embargo, no podemos garantizar que la información sea 100% precisa.",
+    "info-sources": {
+      "header": "Fuentes de Información",
+      "p1": "Nuestro base de datos se beneficia de los datos recogidos por las siguientes organizaciones:",
+      "p2": "Tenemos un equipo de voluntarios increíbles que verifican los datos y recopilan cualquier información adicional, como horas adicionales de Covid-19 para adultos mayores, opciones de recogida segura en la acera, etc."
+    },
+    "info-source": {
+      "link1": "Localizador de las tiendas de USDA SNAP",
+      "link2": "Localizador de las tiendas de USDA WIC",
+      "link3": "Second Harvest de Silicon Valley",
+      "link4": "Stanford Pediatric Advocacy"
+    },
+    "contact-us": {
+      "header": "Contactenos",
+      "p1": {
+        "text": "Si usted tiene preguntas sobre cualquier adición de datos o inexactitudes, o para cualquier otra pregunta, comuníquese con {0}.",
+        "link": "hi@bayareacommunity.org"
+      },
+      "contact-us-header": "Contactenos aqui"
+    },
+    "disclaimer": {
+      "header": "Renuncia",
+      "p": "Este proyecto de Recursos del Área de la Bahía es puramente voluntario. Tenemos un equipo de humanos que recopila y verifica los datos de diversas fuentes. Hacemos nuestro mejor esfuerzo para mantener toda la información en el sitio lo más actualizada posible, sin embargo, no podemos garantizar que la información sea 100% precisa."
+    },
+    "spthanks": {
+      "p": "Agradecimiento especial a {0} y {1}  por potenciar nuestro sitio",
+      "link0": "CARTO",
+      "link1": "Mapbox"
+    }
   },
   "category": {
     "childcare": "Cuidado de los niños",
     "family": "Comida familiar preparada | Comida familiar preparada",
     "farm": "Granja o Mercado de Granjeros | Granjas y Mercados de Agricultores",
+    "food_bev": "Comida y bebida de especialidad",
+    "free_grocery": "Comestible gratis|Comestibles gratis",
     "grocery": "Comestibles",
     "meal": "Comida gratis | Comidas gratis",
     "petsupplies": "Suministros de mascotas",
     "pharmacy": "Farmacia | Farmacias",
     "restaurant": "Restaurante | Restaurantes",
-    "school": "Comida escolar | Comidas escolares"
+    "school": "Comida escolar | Comidas escolares",
+    "snap_wic_retailer": "Comerciante SNAP/WIC|Comerciantes SNAP/WIC",
+    "food_resources": "Recursos Alimenticios",
+    "legal_resources": "Recursos Legales",
+    "medical_resources": "Recursos Médicos",
+    "mental_health_resources": "Recursos de Salud Mental"
   },
   "dayofweek": {
     "any": "Alguna",
@@ -58,40 +124,56 @@
     "address": "Dirección",
     "allweek": "Toda la semana",
     "backtolist": "Volver a la lista",
+    "call_in_advance": "Debe llamar de antemano",
+    "children": "Para los niños",
     "close": "Cerrar",
     "closed": "Cerrado",
     "closed-on": "Cerrado el",
     "closed-today": "Cerrado hoy",
     "closedonday": "Cerrado (en el día seleccionado actual)",
-    "curbside": "Negocio con recogida en la acera|Negocios con recogida en la acera",
+    "curbside_pickup": "Negocio con recogida en la acera|Negocios con recogida en la acera",
+    "curbside_or_delivery": "Se entrega o se recoge en la acera",
     "delivery": "Entrega",
-    "discountmedical": "Descuento para trabajadores médicos|Descuentos para trabajadores médicos",
-    "discounts": "",
-    "drivethru": "Auto-servicio",
+    "discount_medical": "Descuento para trabajadores médicos|Descuentos para trabajadores médicos",
+    "discounts": "Descuentos ",
+    "drive_thru": "Auto-servicio",
     "email": "Email",
     "email_lowercase": "email",
-    "farmersmarket": "Mercado de agricultores | Mercados de agricultores",
-    "farmpick-up": "Recogida en la granja",
-    "freegroceries": "Tienda de comestibles gratis|Tiendas de comestibles gratis",
+    "farmers_market": "Mercado de agricultores | Mercados de agricultores",
+    "farm_pick_up": "Recogida en la granja",
+    "free": "Recurso gratis",
+    "free_groceries": "Tienda de comestibles gratis|Tiendas de comestibles gratis",
     "freemeals": "Lugar de comidas gratis|Lugares de comidas gratis",
-    "freeproduce": "Lugar de productos agrícolas gratuitso|Lugares de productos agrícolas gratuitos",
+    "free_produce": "Lugar de productos agrícolas gratuitso|Lugares de productos agrícolas gratuitos",
     "instructions": "Instrucciones",
     "mapkey": "Guia de mapa",
-    "mealpublic": "Comidas abiertas al público",
-    "mealstudent": "Comidas para estudiantes",
-    "mustpreorder": "Debe pre-ordenar",
+    "meal_public": "Comidas abiertas al público",
+    "meal_student": "Comidas para estudiantes",
+    "must_preorder": "Debe pre-ordenar",
     "normalhours": "Horas normales",
     "notes": "Notas",
     "offers": "Ofertas",
     "open": "Abierto",
     "openinghours": "Horario de apertura",
-    "orderonline": "Ordene y pague en línea",
+    "order_online": "Ordene y pague en línea",
     "phone": "Teléfono",
+    "public": "Abierto a todos",
     "selectacategory": "Seleccione una categoría...",
     "selected": "Seleccionado",
     "seniorhours": "Horas para gente mayor de edad",
-    "specialhours": "Horario comercial para gente mayor de edad",
-    "website": "Sitio web"
+    "seniors": "Para los mayores de edad",
+    "snap": "Lugar que acepta SNAP|Lugares que aceptan SNAP",
+    "special_hours": "Horario comercial para gente mayor de edad",
+    "website": "Sitio web",
+    "wic": "Lugar que acepta WIC|Lugares que aceptan WIC",
+    "ebt_pay_phone": "Pague con EBT por el telefono",
+    " ebt_pay_online": "Pague con EBT en línea",
+    "open_today": "Abierto hoy",
+    "pay_phone": "Pague con EBT por el telefono",
+    "safe_pick_up": "Opciones para recogida segura",
+    "zoom_out_for_more_results": "Aleja el imagen para más resultados",
+    "in_person": "Clínicas en persona",
+    "telehealth": "Asistencia por Telesalud"
   },
   "languages": {
     "ar": "árabe",
@@ -101,11 +183,13 @@
     "ja": "japonés",
     "ko": "coreano",
     "ms": "birmano",
-    "zh": "Chino simplificado"
+    "zh": "Chino simplificado",
+    "vi": "Vietnamita",
+    "tl": "Tagalo"
   },
   "sidebar": {
     "close-panel": "Cerrar panel de búsqueda",
-    "info-about-us": "Actualmente, este sitio admite el Condado de Orange, Carolina del Norte. Con",
+    "info-about-us": "Actualmente, este sitio apoya el Area de la Bahía en CA. Con",
     "info-end-text": ", podemos ampliar nuestra cobertura.",
     "info-link-text": "su ayuda",
     "open-panel": "Abrir panel de búsqueda",
@@ -114,7 +198,42 @@
     "stayhome": "Si está enfermo/a, quédese en casa.",
     "washhands": "Lávese las manos con frecuencia.",
     "what-do-you-need": "¿Que necesita?",
-    "when-do-you-need-it": "Cuando lo necesita?"
+    "when-do-you-need-it": "Cuando lo necesita?",
+    "current_location": "Ubicación actual",
+    "what": "Recurso...",
+    "what-are-you-looking-for": "¿Qué busca? ",
+    "where": "Cerca de..."
   },
-  "title": "Soporte de {0} COVID"
+  "title": "Soporte de {0} COVID",
+  "county": {
+    "alameda": "El condado de Alameda",
+    "anywhere": "Cualquier lugar",
+    "contra-costa": "El condado de Contra Costa",
+    "marin": "El condado de Marin",
+    "napa": "El condado de Napa",
+    "san-francisco": "El condado de San Francisco",
+    "san-mateo": "El condado de San Mateo",
+    "santa-clara": "El condado de Santa Clara",
+    "solano": "El condado de Solano",
+    "sonoma": "El condado de Sonoma",
+    "monterey": "El condado de Monterey"
+  },
+  "legal": {
+    "general_info": "Información general",
+    "legal_assistance": "Asistencia legal",
+    "legal_criminal": "Apoyo con justicia penal",
+    "legal_domviolence": "Apoyo con violencia dómestica",
+    "legal_worker_protection": "Los derechos de los Trabajadores",
+    "legal_healthcare": "Apoyo para solicitud de ayuda médica",
+    "legal_housing": "Ayuda con cuestiones de vivienda",
+    "legal_immigration": "Apoyo con cuestiones de inmigración"
+  },
+  "medical": {
+    "telehealth": "Clínicas de Telesalud"
+  },
+  "mental": {
+    "in_person": "Asistencia en persona"
+  },
+  "no_location_in_this_area": "No hay resultado en esta zona. ",
+  "no_location_meet_these_criteria": "No hay resultado con este criterio."
 }

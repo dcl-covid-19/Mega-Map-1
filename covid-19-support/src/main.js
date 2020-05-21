@@ -9,8 +9,9 @@
 import Vue from 'vue'
 import { BootstrapVue } from 'bootstrap-vue' // IconsPlugin
 import i18n from './i18n'
-
 import App from './App.vue'
+
+import router from './router'
 
 // The following line imports our custom SCSS file, inside that file
 // the main Bootstrap SCSS and BootstrapVue SCSS are imported.
@@ -33,12 +34,14 @@ import './scss/Main.scss'
 
 // Install BootstrapVue
 Vue.use(BootstrapVue)
+
 // Optionally install the BootstrapVue icon components plugin
 // Vue.use(IconsPlugin)
 
 Vue.config.productionTip = true
 
 new Vue({
+  router,
   i18n,
   render: (h) => h(App),
   methods: {

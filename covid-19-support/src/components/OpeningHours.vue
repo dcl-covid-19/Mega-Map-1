@@ -4,7 +4,7 @@
       <b>{{ title }}</b>
     </div>
     <table>
-      <tr v-for="(item, index) in days" :key="index">
+      <tr v-for="(item, index) in days" :key="index" class="oh-row">
         <!-- <i class="fas" :class="icon" /> -->
         <td class="oh-name">{{ item.name }}</td>
         <td :class="item.class"><span v-html="item.val"></span></td>
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { dayFilters, seniorDayFilters, weekdayHours } from '../constants'
+import { dayFilters, seniorDayFilters, weekdayHours } from '@/constants'
 export default {
   name: 'OpeningHours',
   data() {
@@ -25,8 +25,7 @@ export default {
     infotype: { type: String },
     icon: { type: String },
     senior: { type: Boolean },
-    business: { type: Object },
-    day: { type: String }
+    business: { type: Object }
   },
   computed: {
     days() {
@@ -36,13 +35,13 @@ export default {
       if (this.senior) {
         seniorDayFilters.forEach((attr, index) => {
           var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
-          switch (this.business[attr].$t.length) {
+          switch (this.business[attr].length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               // cnt++
               break
             case 1:
-              // if (this.business[attr].$t == '0') {
+              // if (this.business[attr] == '0') {
               //   myDays.push({ name: dayName, val: this.$t('label.closed') })
               // } else {
               //   // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
@@ -50,7 +49,7 @@ export default {
               // }
               break
             default:
-              myDays.push({ name: dayName, val: this.business[attr].$t.replace(',', '<br/>') })
+              myDays.push({ name: dayName, val: this.business[attr].replace(/,/g, '<br/>') })
               cnt++
               break
           }
@@ -58,14 +57,14 @@ export default {
       } else {
         dayFilters.forEach((attr, index) => {
           var dayName = this.$t(`dayofweek.${weekdayHours[index].day}`)
-          switch (this.business[attr].$t.length) {
+          switch (this.business[attr].length) {
             case 0:
               // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
               // cnt++
               break
             case 1:
-              if (this.business[attr].$t == 0) {
-                myDays.push({ name: dayName, val: this.$t('label.closed'), class: 'closed' })
+              if (this.business[attr] == 0) {
+                myDays.push({ name: dayName, val: this.$t('label.closed'), class: 'openingHoursClosed' })
               } else {
                 // myDays.push({ name: dayName, val: this.$t('label.normalhours') })
                 // cnt++
@@ -73,7 +72,7 @@ export default {
               cnt++
               break
             default:
-              myDays.push({ name: dayName, val: this.business[attr].$t.replace(',', '<br/>') })
+              myDays.push({ name: dayName, val: this.business[attr].replace(/,/g, '<br/>') })
               cnt++
               break
           }
@@ -92,13 +91,17 @@ export default {
 
 <style>
 .openhours {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+}
+.oh-title {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
 }
 .oh-name {
-  padding-right: 20px;
+  padding: 2px 20px 2px 0;
   vertical-align: top;
 }
-.closed {
-  color: #ff2c1c;
+.oh-row {
+  padding-bottom: 4px;
 }
 </style>

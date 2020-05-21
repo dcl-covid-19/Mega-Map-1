@@ -2222,7 +2222,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>discountmedical</name>
+                        <name>discount_medical</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2304,7 +2304,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>drivethru</name>
+                        <name>drive_thru</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2427,7 +2427,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>farmersmarket</name>
+                        <name>farmers_market</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2468,7 +2468,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>farmpick-up</name>
+                        <name>farm_pick_up</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2509,7 +2509,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>freegroceries</name>
+                        <name>free_groceries</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2591,7 +2591,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>freeproduce</name>
+                        <name>free_produce</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2714,7 +2714,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>mealpublic</name>
+                        <name>meal_public</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2755,7 +2755,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>mealstudent</name>
+                        <name>meal_student</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -2796,7 +2796,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>mustpreorder</name>
+                        <name>must_preorder</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -3042,7 +3042,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>orderonline</name>
+                        <name>order_online</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>
@@ -3247,7 +3247,7 @@
                         </translations>
                     </concept_node>
                     <concept_node>
-                        <name>specialhours</name>
+                        <name>special_hours</name>
                         <definition_loaded>false</definition_loaded>
                         <description></description>
                         <comment></comment>

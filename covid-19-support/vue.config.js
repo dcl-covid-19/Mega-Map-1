@@ -1,6 +1,6 @@
 module.exports = {
 
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'NCCovidSupport' ? '/mega-map-dev/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_THEME === 'NCCovidSupport' ? '/' : '/',
 
   pluginOptions: {
     i18n: {

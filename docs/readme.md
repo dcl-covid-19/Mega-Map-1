@@ -13,6 +13,7 @@ a Bay Area school meals map, and now provides information on resources such
 as locations and schedules for free meals, food assistance, legal assistance, 
 and medical help.
 
+
 ## This project is
 
 - A mobile-first website with an interactive map and table of local resources.
@@ -32,6 +33,7 @@ and medical help.
 The project began with students and employees affiliated with Stanford's [Data Impact Lab](https://datalab.stanford.edu/challenge-lab) and 
 [Big Local News](https://biglocalnews.org/). We are extremely grateful to 
 Bill Behrman, Sara Altman, and Cheryl Phillips for their ongoing support and advice.
+
 
 The development for this project was adapted from 
 [NCCovid Support](https://github.com/code-for-chapel-hill/NC-COVID-Support/) built by

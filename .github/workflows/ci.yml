@@ -36,9 +36,9 @@ jobs:
         working-directory: covid-19-support
 
       # Runs the unit tests
-      - name: Unit tests
-        run: npm run test:unit
-        working-directory: covid-19-support
+      #- name: Unit tests
+      #  run: npm run test:unit
+      #  working-directory: covid-19-support
 
       # Runs the linter
       - name: lint

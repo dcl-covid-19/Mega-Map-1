@@ -9,7 +9,7 @@
     "devhelp": {
       "addbusiness": "添加业务",
       "addinfo": "使用我们的在线表格填写 {0} 或 {1}。",
-      "ambassadorinfo": "帮助我们扩大在北卡罗来纳州的覆盖范围。大使将与当地政府和商业协会合作，为社区提供NC COVID支持。给我们发电子邮件，地址为 {0} ，以获取入门所需的工具和资源。",
+      "ambassadorinfo": "帮助我们扩大湾区覆盖范围。大使将会与当地政府部门和企业合作把我们的湾区社区资源地图带到他们的社区里。发邮件{0}来获取工具及资源。",
       "becomeambassador": "成为社区大使",
       "conduct": "行为守则",
       "devnote": "开发人员-在GitHub上找到我们的 {0} 和 {1} 。",
@@ -28,21 +28,88 @@
       "chb": "教堂山大队",
       "farmstewards": "卡罗来纳州农场管理协会",
       "localistnc": "#LocalListNC",
-      "partnership": "教堂山市中心合作伙伴"
+      "partnership": "教堂山市中心合作伙伴",
+      "dcl": "数据挑战实验室",
+      "bln": "重大当地新闻"
     },
     "partners": "信息来源",
-    "title": "关于本网站"
+    "title": "关于本网站",
+    "front-page": {
+      "p1": "你好！",
+      "p2": "我们提供包括免费餐，食物，法律协助和医疗协助资源的有关信息。请选在你的位置和你在寻找的资源。",
+      "p3": "开始检索，请选择你的位置和你想要找的资源。",
+      "p4": {
+        "text": "我们隶属于斯坦福  {0} 和 {1} , 我们很感谢Bill Behrman, Sara Altman, and Cheryl Phillips 对我们给予的帮助和指导。",
+        "link0": "数据挑战实验室",
+        "link1": "重大当地新闻"
+      }
+    },
+    "about-us": {
+      "header": "关于我们",
+      "p1": {
+        "text": "我们由志愿者协助完成的资源公共享的项目为我们的社区提供所需资源的信息来帮助度过COVID-19疫情的难关。我们项目从 {0} 开始，现在提供更全面的资源信息，包括免费餐，食物，法律协助和医疗协助等资源的开放时间和地点。这个项目最初借鉴了NC的COVID-19协助。你也在github上寻找到更多关于我们项目的信息，包括我们的程序编码。",
+        "link": "湾区学校用餐地图"
+      },
+      "p2": {
+        "text": "我们项目最初借鉴了 {0} 。",
+        "link": "NCCovid Support"
+      },
+      "p3": {
+        "text": "你也在 {0} 上寻找到更多关于我们项目的信息，包括我们的程序编码。",
+        "link": "github网页"
+      }
+    },
+    "about-us-sources": "我们的资源库受益于以下机构收集来的信息：USDA SNAP 商店位置检索\nUSDA WIC 商店位置检索\n硅谷 Second Harvest\n斯坦福 Pediatric Advocacy\n我们有一支志愿者队伍来核对和收集更多跟COVID-19有关的信息，包括老人时间段，街边递送服务等。",
+    "about-us-contact": {
+      "link0": "hi@bayareacommunity.org"
+    },
+    "about-us-disclaimer": "这个湾区资源项目全部是有志愿者完成的。我们有一支志愿者队伍搜集和核对信息。我们尽最大能力确保信息时效性，但是我们无法保证信息100%准确。",
+    "info-sources": {
+      "header": "信息资源",
+      "p1": "我们的资源库受益于以下机构收集来的信息",
+      "p2": "我们有一支志愿者队伍进行资源的征集和核对，其中包裹跟Covid-19 有关信息，比如老人时间段，街边安全递送等信息。"
+    },
+    "info-source": {
+      "link1": "USDA SNAP 商店位置检索",
+      "link2": "USDA WIC 商店位置检索",
+      "link3": "硅谷 Second Harvest",
+      "link4": "斯坦福 Pediatric Advocacy"
+    },
+    "contact-us": {
+      "header": "联系我们",
+      "p1": {
+        "text": "如果有关于数据增添和准确性方面的问题，或者任何其他方面的问题，请{0}。",
+        "link": "hi@bayareacommunity.org"
+      },
+      "contact-us-header": "这里联系我们"
+    },
+    "disclaimer": {
+      "header": "免责声明",
+      "p": "这个湾区资源项目全部是有志愿者完成的。我们有一支志愿者队伍搜集和核对信息。我们尽最大能力确保信息时效性，但是我们无法保证信息100%准确。"
+    },
+    "spthanks": {
+      "p": "特别感谢{0} 和{1} 为我们的网站提供的帮助。",
+      "link0": "CARTO",
+      "link1": "Mapbox"
+    }
   },
   "category": {
     "childcare": "育儿",
     "family": "家庭准备饭|家庭准备饭",
     "farm": "农场或农贸市场|农场与农贸市场",
+    "food_bev": "特殊食物及饮品",
+    "free_grocery": "免费超市",
     "grocery": "杂货|杂货",
     "meal": "免费餐|免费餐",
     "petsupplies": "宠物用品",
     "pharmacy": "药房|药房",
     "restaurant": "餐厅|餐厅",
-    "school": "学校餐|学校餐"
+    "school": "学校餐|学校餐",
+    "snap_wic_retailer": "营养/妇幼保健商店",
+    "food_resources": "食物资源",
+    "legal_resources": "法律资源",
+    "medical_resources": "医疗资源",
+    "mental_health_resources": "心理健康资源"
   },
   "dayofweek": {
     "any": "任何",
@@ -58,40 +125,56 @@
     "address": "地址",
     "allweek": "整个星期",
     "backtolist": "返回目录",
+    "call_in_advance": "必须提前电话咨询",
+    "children": "给孩子",
     "close": "关",
     "closed": "关闭",
     "closed-on": "封闭于",
     "closed-today": "今天休息",
     "closedonday": "休馆（当前选定日期）",
-    "curbside": "路边捡拾",
+    "curbside_pickup": "路边捡拾",
+    "curbside_or_delivery": "送餐或者路边提餐",
     "delivery": "交货",
-    "discountmedical": "医务人员折扣|医务人员折扣",
-    "discounts": "",
-    "drivethru": "得来速",
+    "discount_medical": "医务人员折扣|医务人员折扣",
+    "discounts": "折扣",
+    "drive_thru": "得来速",
     "email": "电子邮件",
     "email_lowercase": "电子邮件",
-    "farmersmarket": "农贸市场|农贸市场",
-    "farmpick-up": "农场接送",
-    "freegroceries": "免费杂货店|免费杂货店",
+    "farmers_market": "农贸市场|农贸市场",
+    "farm_pick_up": "农场接送",
+    "free": "免费资源",
+    "free_groceries": "免费杂货店|免费杂货店",
     "freemeals": "免费用餐地点|免费用餐地点",
-    "freeproduce": "免费产品位置|免费产品位置",
+    "free_produce": "免费产品位置|免费产品位置",
     "instructions": "说明",
     "mapkey": "地图键",
-    "mealpublic": "餐点向公众开放",
-    "mealstudent": "给学生的饭菜",
-    "mustpreorder": "必须预订",
+    "meal_public": "餐点向公众开放",
+    "meal_student": "给学生的饭菜",
+    "must_preorder": "必须预订",
     "normalhours": "正常营业时间",
     "notes": "笔记",
     "offers": "优惠",
     "open": "打开",
     "openinghours": "营业时间",
-    "orderonline": "在线订购和付款",
+    "order_online": "在线订购和付款",
     "phone": "电话",
+    "public": "面向大众",
     "selectacategory": "选择一个类别...",
     "selected": "选",
     "seniorhours": "高级时间",
-    "specialhours": "高级购物时间",
-    "website": "网站"
+    "seniors": "给老人",
+    "snap": "营养供给接受地区",
+    "special_hours": "高级购物时间",
+    "website": "网站",
+    "wic": "妇幼保健接受地区",
+    "ebt_pay_phone": "通过电话用EBT支付",
+    " ebt_pay_online": "线上EBT支付",
+    "open_today": "今日开放",
+    "pay_phone": "通过电话用EBT支付",
+    "safe_pick_up": "安全\b取物\b\b选择",
+    "zoom_out_for_more_results": "缩小以获取更多结果",
+    "in_person": "当面诊所",
+    "telehealth": "线上帮助"
   },
   "languages": {
     "ar": "阿拉伯",
@@ -101,11 +184,13 @@
     "ja": "日本",
     "ko": "朝鲜的",
     "ms": "缅甸语",
-    "zh": "简体中文"
+    "zh": "简体中文",
+    "vi": "越南的",
+    "tl": "他加禄的"
   },
   "sidebar": {
     "close-panel": "关闭搜索面板",
-    "info-about-us": "当前，此站点支持北卡罗来纳州奥兰治县。用",
+    "info-about-us": "目前，这项服务支持湾区。",
     "info-end-text": "，我们可以扩大覆盖范围。",
     "info-link-text": "你的帮助",
     "open-panel": "打开搜索面板",
@@ -114,7 +199,42 @@
     "stayhome": "如果您生病了，请待在家里。",
     "washhands": "经常洗手。",
     "what-do-you-need": "你需要什么？",
-    "when-do-you-need-it": "您什么时候需要它？"
+    "when-do-you-need-it": "您什么时候需要它？",
+    "current_location": "当前位置",
+    "what": "资源。。。",
+    "what-are-you-looking-for": "你在找什么？",
+    "where": "附近。。。"
   },
-  "title": "{0} COVID支持"
+  "title": "{0} COVID支持",
+  "county": {
+    "alameda": "阿拉米达县",
+    "anywhere": "任何地方",
+    "contra-costa": "康特拉克斯塔县",
+    "marin": "马林县",
+    "napa": "纳帕县",
+    "san-francisco": "旧金山县",
+    "san-mateo": "圣马刁县",
+    "santa-clara": "圣克拉拉县",
+    "solano": "索拉诺县",
+    "sonoma": "索诺玛县",
+    "monterey": "蒙特雷县"
+  },
+  "legal": {
+    "general_info": "综合信息",
+    "legal_assistance": "法律帮助",
+    "legal_criminal": "刑事司法协助",
+    "legal_domviolence": "家庭暴力协助",
+    "legal_worker_protection": "工人权益",
+    "legal_healthcare": "医疗保险申请帮助",
+    "legal_housing": "住所问题协助",
+    "legal_immigration": "移民问题协助"
+  },
+  "medical": {
+    "telehealth": "线上诊所"
+  },
+  "mental": {
+    "in_person": "当面帮助"
+  },
+  "no_location_in_this_area": "这个区域没有结果",
+  "no_location_meet_these_criteria": "这些标准哪没有结果。"
 }

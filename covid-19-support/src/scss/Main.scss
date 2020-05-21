@@ -2,9 +2,9 @@ html,
 body {
   overflow: hidden;
   height: 100%;
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     background-color: #000;
-  }
+  } */
 }
 #wrapper {
   height: 100%;
@@ -16,7 +16,6 @@ h3,
 h4,
 h5,
 h6,
-.navbar-brand,
 .themeFont {
   font-weight: 600 !important;
 }
@@ -24,16 +23,16 @@ h6,
 // .bg-dialogs {
 //   color: #666;
 //   background-color: theme-color('secondary');
-//   @media (prefers-color-scheme: dark) {
+//   /* @media (prefers-color-scheme: dark) {
 //     // color: #ccc !important;
 //     background-color: theme-color-('secondary');
 //     &:hover {
 //       // color: #ccc !important;
 //     }
-//   }
+//   } */
 // }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .border-left,
   .border-right,
   .border-top,
@@ -46,7 +45,7 @@ h6,
     border: 1px solid #676a6d;
     color: #ccc;
   }
-}
+} */
 
 // button.btn-secondary {
 //   &,
@@ -60,16 +59,24 @@ h6,
 //   }
 // }
 
-// .navbar-dark .navbar-nav .nav-item.addbus .nav-link {
+/*// .navbar-dark .navbar-nav .nav-item.addbus .nav-link {
 //   &,
 //   &:focus {
-//     color: rgba(237, 201, 167, 1) !important;
+//     color: white !important;
 //   }
 
 //   &:hover {
 //     color: rgba(238, 136, 66, 1) !important;
 //   }
-// }
+// }*/
+
+.navbar-dark .navbar-nav .nav-link {
+  color: theme-color(secondary);
+}
+
+.nav.navbar-nav a:hover {
+  color: white;
+}
 
 #search-filter-wrapper,
 #page-content-wrapper {
@@ -99,4 +106,29 @@ h6,
   left: -42px;
   width: 120px;
   color: #333;
+}
+
+a {
+  color: theme-color(primary);
+}
+
+a:hover {
+  color: theme-color(primaryDark);
+}
+
+.attributions,
+.mapbox-wordmark {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .attributions,
+  .mapbox-wordmark {
+    display: block;
+  }
+}
+
+.attributions.show-key,
+.mapbox-wordmark.show-key {
+  display: block;
 }
