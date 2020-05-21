@@ -62,7 +62,7 @@
           />
         </div>
       </div>
-      <a class="more-result bottom" href="#" @click="zoomOut" v-if="displayMap">{{ $tc('label.zoom_out_for_more_results') }}</a>
+      <a class="more-result bottom" href="#" @click="resetZoom" v-if="displayMap">{{ $tc('label.reset_zoom') }}</a>
     </div>
   </div>
 </template>
@@ -144,6 +144,9 @@ export default {
     zoomOut() {
       this.$emit('zoom-out')
       this.showDetails = false
+    },
+    resetZoom() {
+      this.$emit('reset-zoom')
     }
   },
   computed: {

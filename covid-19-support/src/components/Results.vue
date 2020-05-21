@@ -11,6 +11,7 @@
         :nearLatLonZoom="nearLatLonZoom"
         :resource="resourceData"
         :zoomDiff="zoomDiff"
+        :zoomReset="zoomReset"
       />
       <div id="result-details" ref="result-details" :class="{ noMap: !displayMap }">
         <filters
@@ -26,6 +27,7 @@
           :markers="markers"
           :resource="resourceData"
           @resource-selected="passSelectedMarker"
+          @reset-zoom="resetZoom"
           @zoom-out="zoomOut"
           :displayMap="displayMap"
           @scroll="scroll"
@@ -62,7 +64,8 @@ export default {
       centroid: [null, null],
       resourceData: { resourceId: null, isSetByMap: false },
       activeFilters: [],
-      zoomDiff: 0
+      zoomDiff: 0,
+      zoomReset: false
     }
   },
   created() {
@@ -97,6 +100,10 @@ export default {
     zoomOut() {
       this.zoomDiff = 2
       this.$nextTick(() => (this.zoomDiff = 0))
+    },
+    resetZoom() {
+      this.zoomReset = true
+      this.$nextTick(() => (this.zoomReset = false))
     },
     scroll(offset) {
       if (this.displayMap) {
