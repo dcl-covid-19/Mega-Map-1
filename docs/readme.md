@@ -22,7 +22,7 @@ From the `covid-19-support` directory:
 
 You can find the login credentials for AWSEducate in the Google Drive. See the AWS docs for
 [How to login](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
-and this [Stack Overflow post](https://labs.vocareum.com/main/main.php?m=editor&nav=1&asnid=14334&stepid=14335)
+and this [Stack Overflow post](https://stackoverflow.com/questions/40515079/access-key-id-and-secret-access-key-for-aws-educate-account)
 for how to find AWS Config details on AWSEducate.
 
 ## This project is
