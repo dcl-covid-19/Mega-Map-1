@@ -63,7 +63,7 @@
     <h6>{{ $t('about.our-team.sourcing') }}</h6>
     <p>
       Brandon Bergsneider, Kashika Bharol, Annie Chang, Trillium Chang, Zoya Chughtai, Taylor Evensen, Anna Greene, Aidan Lee, Melanie
-      Ramirez, Micah Trautwein, Sam Wallace-Perdomo, Jeffrey Xia, Emily Yang ({{ $t('about.our-team.resource') }}).
+      Ramirez, Ashley Nies, Micah Trautwein, Sam Wallace-Perdomo, Jeffrey Xia, Emily Yang ({{ $t('about.our-team.resource') }}).
     </p>
     <p>
       Angela Chau, Celine Gandingco, Rachel Koo, Phung Hoang Thanh Le, Heather Nguyen, Ashwin Reddy, Fernanda Roman, Benjamin Reyes Topacio,
