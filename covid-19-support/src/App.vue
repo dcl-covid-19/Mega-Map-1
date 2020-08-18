@@ -32,7 +32,7 @@ import AppHeader from '@/components/Header.vue'
 import Search from '@/components/Search.vue'
 import Banner from '@/components/Banner.vue'
 import BlmBanner from '@/components/BlmBanner.vue'
-import { needs } from '@/resources/resources.js'
+import { needs_name } from '@/resources/resources.js'
 export default {
   name: 'app',
   props: {
@@ -117,13 +117,12 @@ export default {
       // update need based on route
       if (to.path == '/') {
         this.initialSearch = true
-        this.showBanner = true
+        // this.showBanner = true
         this.need = null
         this.nearLocation = null
       } else {
         // catch all - redirect to '/' - needs to be fixed atm I need to add any new page to this list!
-        if (!needs[to.params.need] && !['/about-us', '/blm-statement'].includes(to.path)) {
-          console.log(to.path)
+        if (!needs_name.includes(to.params.need) && !['/about-us', '/blm-statement'].includes(to.path)) {
           this.$router.push('/')
         } else {
           this.initialSearch = false
