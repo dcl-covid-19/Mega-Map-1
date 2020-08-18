@@ -32,7 +32,7 @@ import AppHeader from '@/components/Header.vue'
 import Search from '@/components/Search.vue'
 import Banner from '@/components/Banner.vue'
 import BlmBanner from '@/components/BlmBanner.vue'
-import { needs_name } from '@/constants'
+import { needs_name } from '@/resources/resources.js'
 export default {
   name: 'app',
   props: {
@@ -117,7 +117,7 @@ export default {
       // update need based on route
       if (to.path == '/') {
         this.initialSearch = true
-        this.showBanner = true
+        // this.showBanner = true
         this.need = null
         this.nearLocation = null
       } else {
