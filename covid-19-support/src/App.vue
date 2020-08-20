@@ -117,12 +117,12 @@ export default {
       // update need based on route
       if (to.path == '/') {
         this.initialSearch = true
-        this.showBanner = true
+        // this.showBanner = true
         this.need = null
         this.nearLocation = null
       } else {
         // catch all - redirect to '/' - needs to be fixed atm I need to add any new page to this list!
-        if (!needs_name.includes(to.params.need) && !['/about-us', '/blm-statement'].includes(to.path)) {
+        if (!needs.includes(to.params.need) && !['/about-us', '/blm-statement'].includes(to.path)) {
           this.$router.push('/')
         } else {
           this.initialSearch = false
