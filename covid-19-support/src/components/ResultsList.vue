@@ -43,19 +43,15 @@
                 <!-- End Legal resource description -->
               </div>
               <!-- Badges -->
-              <span v-if="!item.isOpen" class="badge closed">{{ getClosedMessage() }}</span>
-              <span v-if="item.isOpen" class="badge open">{{ getOpenMessage(item) }}</span>
-              <span v-if="item.call_in_advance == 1" class="badge">{{ $tc('label.call_in_advance') }}</span>
-              <span v-if="item.special_hours == 1" class="badge">{{ $tc('label.special_hours') }}</span>
-              <span v-if="item.ebt_pay_phone == 1" class="badge">{{ $tc('label.ebt_pay_phone') }}</span>
-              <span v-if="item.ebt_pay_online == 1" class="badge">{{ $tc('label.ebt_pay_online') }}</span>
-              <!-- Legal badges -->
-              <span v-if="item.legal_criminal == 1" class="badge">{{ $tc('legal.legal_criminal') }}</span>
-              <span v-if="item.legal_domviolence == 1" class="badge">{{ $tc('legal.legal_domviolence') }}</span>
-              <span v-if="item.legal_worker_protection == 1" class="badge">{{ $tc('legal.legal_worker_protection') }}</span>
-              <span v-if="item.legal_healthcare == 1" class="badge">{{ $tc('legal.legal_healthcare') }}</span>
-              <span v-if="item.legal_housing == 1" class="badge">{{ $tc('legal.legal_housing') }}</span>
-              <span v-if="item.legal_housing == 1" class="badge">{{ $tc('legal.legal_immigration') }}</span>
+              <div v-for="(badge, index) in badgeList" v-bind:key="index" class="badges">
+                <template v-if="badge.var == 'open_today'">
+                  <span v-if="!item.isOpen" class="badge closed">{{ getClosedMessage() }}</span>
+                  <span v-if="item.isOpen" class="badge open">{{ getOpenMessage(item) }}</span>
+                </template>
+                <template v-else>
+                  <span v-if="item[badge.var] == 1" class="badge">{{ $t(badge.label) }}</span>
+                </template>
+              </div>
               <!-- End Badges -->
             </div>
             <i class="fas fa-chevron-right fa-lg" :class="{ 'fa-rotate-90': showDetails && item.cartodb_id == resource.resourceId }"></i>
@@ -86,6 +82,7 @@
 import BusinessDetails from '@/components/BusinessDetails.vue'
 import { StatusEnum } from '@/components/Results.vue'
 import EditForm from '@/components/EditForm.vue'
+import { needs } from '@/resources/resources.js'
 
 export default {
   name: 'ResultsList',
@@ -186,6 +183,9 @@ export default {
     },
     mentalResources() {
       return this.$route.params.need.startsWith('mental')
+    },
+    badgeList() {
+      return needs[this.$route.params.need].badges
     }
   }
 }
@@ -194,7 +194,6 @@ export default {
 .resultWrapper {
   flex: 1 1 100%;
   scrollbar-color: $gray-900 $gray-700;
-  overflow-y: scroll;
   width: 100%;
   z-index: 2000;
   padding: 8px;
@@ -330,5 +329,9 @@ export default {
 
 .modal-footer {
   display: none !important;
+}
+
+.badges {
+  display: inline-block;
 }
 </style>

@@ -14,14 +14,22 @@
         :resetMap="resetMap"
       />
       <div id="result-details" ref="result-details" :class="{ noMap: !displayMap }">
-        <filters
-          ref="filters"
-          :class="{ noMap: !displayMap }"
-          :need="$route.params.need"
-          :markers="markers"
-          :activeFilters="activeFilters"
-          @box-selected="boxSelected"
-        />
+        <b-modal id="filters-modal" :title="$t('label.filters')">
+          <filters
+            :class="{ noMap: !displayMap }"
+            :need="$route.params.need"
+            :markers="markers"
+            :activeFilters="activeFilters"
+            @box-selected="boxSelected"
+            @close-filters="closeFilters"
+            @reset-filters="resetFilters"
+          />
+        </b-modal>
+        <div class="pt-2 px-2" ref="filters">
+          <b-button @click="(e) => e.stopPropagation()" variant="info" class="btn btn-md btn-block" v-b-modal.filters-modal>
+            <i class="fas fa-filter" /> {{ $t('label.filters') }}
+          </b-button>
+        </div>
         <results-list
           :class="{ noMap: !displayMap }"
           :fetchDataState="fetchDataState"
@@ -39,21 +47,13 @@
 
 <script>
 import 'whatwg-fetch'
-import {
-  cartoBaseURL,
-  sqlQueries,
-  zipQuery,
-  // countyLatLon,
-  booleanFilters,
-  complexFilters,
-  dayFilters,
-  needsWithGeoFilter
-} from '@/constants'
+import { cartoBaseURL, dbQuery, zipQuery, needsWithGeoFilter } from '@/constants'
+import { booleanFilters, complexFilters, dayFilters } from '@/resources/filters.js'
+import { needs } from '@/resources/resources.js'
 import ResourceMap from '@/components/ResourceMap.vue'
 import ResultsList from '@/components/ResultsList.vue'
 import Filters from '@/components/Filters.vue'
-import { addOrRemove } from '@/utilities'
-import { haversineDistance, sortByDistance } from '@/utilities'
+import { addOrRemove, haversineDistance, sortByDistance } from '@/utilities'
 import { latLng } from 'leaflet'
 
 export const StatusEnum = Object.freeze({ loading: 1, error: 2, loaded: 3 })
@@ -138,8 +138,11 @@ export default {
         throw Error(response.statusText)
       }
     },
-    closeEditForm() {
-      this.showEditForm = false
+    closeFilters() {
+      this.$bvModal.hide('filters-modal')
+    },
+    resetFilters() {
+      this.activeFilters = []
     },
     displayEditForm(item) {
       this.showEditForm = true
@@ -164,12 +167,13 @@ export default {
     },
     scroll(offset) {
       if (this.displayMap) {
-        this.$refs['result-details'].scrollTo(0, offset + this.$refs['filters'].$el.offsetHeight)
+        this.$refs['result-details'].scrollTo(0, offset + this.$refs['filters'].offsetHeight)
       }
     },
     buildQuery(route, log = true) {
       // query building
-      let query = sqlQueries[route.params.need]
+      let query = dbQuery + needs[route.params.need].sql_query
+
       if (needsWithGeoFilter.includes(route.params.need) && !(typeof route.query.near === 'undefined')) {
         let countyFilter =
           this.county
@@ -208,6 +212,9 @@ export default {
     }
   },
   computed: {
+    need() {
+      return needs[this.$route.params.need]
+    },
     currentBusiness() {
       if (this.resourceData == null || this.markers == null) {
         return null
@@ -216,9 +223,16 @@ export default {
         ? this.markers.filter((c) => c.cartodb_id == this.resourceData.resourceId)[0]
         : null
     },
+    displayMapFromFilter() {
+      if (this.need.filters.length > 0) {
+        return this.need.filters.some((f) => {
+          return Object.prototype.hasOwnProperty.call(f, 'display_map') && f.display_map && this.activeFilters.includes(f.var)
+        })
+      }
+      return false
+    },
     displayMap() {
-      const needWithMap = ['meal', 'free_grocery', 'snap_wic_retailer']
-      return needWithMap.includes(this.$route.params.need) || this.activeFilters.includes('in_person')
+      return this.need.display_map || this.displayMapFromFilter
     },
     markers() {
       if (!this.entries) {
@@ -283,7 +297,6 @@ export default {
         await this.fetchMapCenter(to)
       }
       const new_query = this.buildQuery(to, false)
-      console.log(old_query, new_query)
       if (old_query != new_query) {
         this.fetchData(this.buildQuery(to))
         this.activeFilters = []

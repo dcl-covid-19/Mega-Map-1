@@ -35,71 +35,16 @@ export const openStreetMapAttribution = '&copy; <a href="http://osm.org/copyrigh
 export const mapBoxAttribution =
   '&copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a> &copy; <a href="https://carto.com/attribution">CARTO</a> &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>'
 
-export const dayFilters = ['sun', 'mon', 'tues', 'wed', 'thr', 'fri', 'sat'].map((attr) => `${attr}`)
-export const seniorDayFilters = ['sun', 'mon', 'tues', 'wed', 'thr', 'fri', 'sat'].map((attr) => `sp_${attr}`)
-
-export const booleanFilters = [
-  'pay_at_pickup',
-  'curbside_pickup',
-  'special_hours',
-  'meal_student',
-  'meal_public',
-  'family_meal',
-  'pay_phone',
-  'pay_online',
-  'must_preorder',
-  'discount_medical',
-  'delivery',
-  'free_produce',
-  'free_groceries',
-  'farm_pick_up',
-  'farmers_market',
-  'free',
-  'wic',
-  'snap',
-  'call_in_advance',
-  'seniors',
-  'children',
-  'public',
-  'telehealth',
-  'in_person',
-  'legal_criminal',
-  'legal_domviolence',
-  'legal_worker_protection',
-  'legal_healthcare',
-  'legal_housing',
-  'legal_immigration'
-]
-
-// Combination of boolean filters
-export const complexFilters = [
-  { name: 'curbside_or_delivery', columns: ['curbside_pickup', 'delivery'], combine: ([a, b]) => a || b },
-  { name: 'safe_pick_up', columns: ['curbside_pickup', 'delivery'], combine: ([a, b]) => a || b }
-]
-
 // CARTO DB VARIABLES
-export const cartoBaseURL =
-  // 'https://mfincker.carto.com/api/v2/sql?api_key=' + process.env.VUE_APP_CARTO_API_KEY
-  'https://dcl-mega-map.carto.com/api/v2/sql?'
+export const cartoBaseURL = 'https://dcl-mega-map.carto.com/api/v2/sql?'
 
 export const cartoDBName = 'mega_map_database'
 
 export const zipDBName = 'zipcode_db'
 
-export const needs = ['free_grocery', 'meal', 'snap_wic_retailer', 'legal_assistance', 'health', 'mental_health']
-
 export const needsWithGeoFilter = ['legal_assistance', 'health', 'mental_health']
 
-export const sqlQueries = {
-  free_grocery: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'grocery' AND free = 1 AND status = 1",
-  meal: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'meal' AND status = '1'",
-  snap_wic_retailer: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'grocery' AND free = 0 AND status = 1",
-  // legal_general_info: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'legal_general_info'",
-  legal_assistance: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'legal_services' AND status = 1",
-  // medical: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'medical' AND status = 1",
-  mental_health: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'health' AND med_mental_health = 1 AND status = 1",
-  health: 'SELECT * FROM ' + cartoDBName + " WHERE resource = 'health' AND status = 1"
-}
+export const dbQuery = 'SELECT * FROM ' + cartoDBName
 
 export const zipQuery = 'SELECT * FROM ' + zipDBName + ' WHERE zip = '
 

@@ -28,7 +28,7 @@
         </p>
         <p>
           <opening-hours :business="business" :title="$t('label.openinghours')"></opening-hours>
-          <opening-hours :business="business" :title="$t('label.seniorhours')" :senior="true"></opening-hours>
+          <opening-hours v-if="business.special_hours" :business="business" :title="$t('label.seniorhours')" :senior="true"></opening-hours>
           <template v-if="!!business.offers">
             <p>
               <b>{{ $t('label.offers') }}:</b> {{ business.offers }}

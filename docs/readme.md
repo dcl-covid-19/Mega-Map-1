@@ -7,10 +7,10 @@
 
 ![Bay Area Community Resources Website](/covid-19-support/src/images/BAYCR.png)
 
-We are a volunteer-driven, open-source project to help communities navigate the 
-COVID crisis by providing information on public resources. This project began as 
-a Bay Area school meals map, and now provides information on resources such 
-as locations and schedules for free meals, food assistance, legal assistance, 
+We are a volunteer-driven, open-source project to help communities navigate the
+COVID crisis by providing information on public resources. This project began as
+a Bay Area school meals map, and now provides information on resources such
+as locations and schedules for free meals, food assistance, legal assistance,
 and medical help.
 
 ## Dev Quickstart
@@ -20,8 +20,10 @@ From the `covid-19-support` directory:
 - Deploy to staging: `env VUE_APP_DEPLOY="GITHUB" npm run build && npm run deploy`
 - Deploy to production: `npm run build && bash deploy_aws.sh`
 
-You can find the login credentials for AWS in the Google Drive. See the AWS docs for
+You can find the login credentials for AWSEducate in the Google Drive. See the AWS docs for
 [How to login](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+and this [Stack Overflow post](https://stackoverflow.com/questions/40515079/access-key-id-and-secret-access-key-for-aws-educate-account)
+for how to find AWS Config details on AWSEducate.
 
 ## This project is
 
@@ -39,16 +41,16 @@ You can find the login credentials for AWS in the Google Drive. See the AWS docs
 
 ## Authors
 
-The project began with students and employees affiliated with Stanford's [Data Impact Lab](https://datalab.stanford.edu/challenge-lab) and 
-[Big Local News](https://biglocalnews.org/). We are extremely grateful to 
+The project began with students and employees affiliated with Stanford's [Data Impact Lab](https://datalab.stanford.edu/challenge-lab) and
+[Big Local News](https://biglocalnews.org/). We are extremely grateful to
 Bill Behrman, Sara Altman, and Cheryl Phillips for their ongoing support and advice.
 
 
-The development for this project was adapted from 
+The development for this project was adapted from
 [NCCovid Support](https://github.com/code-for-chapel-hill/NC-COVID-Support/) built by
 [Code for Chapel Hill](http://www.codeforchapelhill.com/).
 
-Special thanks to [CARTO](https://carto.com/) and [Mapbox](http://mapbox.com) 
+Special thanks to [CARTO](https://carto.com/) and [Mapbox](http://mapbox.com)
 for powering our site.
 
 Thank you to Melanie Ramirez and Jesus Pineda-Ramirez for inspiring us to do
@@ -56,13 +58,13 @@ this.
 
 ## Contact us
 
-For questions on any data additions or inaccuracies, or for any other questions, 
+For questions on any data additions or inaccuracies, or for any other questions,
 please contact [baycommunityresource@gmail.com](mailto:baycommunityresource@gmail.com).
 
-## Volunteers 
+## Volunteers
 
 This project would not be possible without our amazing data entry, design
-and translator volunteers! There are many more of you to thank, but 
+and translator volunteers! There are many more of you to thank, but
 here are only a few of your names. Thank you.
 
 - Michael Alisky
@@ -106,7 +108,6 @@ Thanks also to our tireless data and development teams:
   <td align="center"><a href="https://github.com/llwu"><img src="https://avatars0.githubusercontent.com/u/5601392?s=400&u=fa7c04edf4c6d0d8021884410d54f45567772f56&v=4" width="100px;" alt=""/><br /><sub><b>Lawrence Wu</b></sub></a><br /></td>
   <td align="center"><sub><b>Charles Cho</b></sub><br /></td>
   <td align="center"><sub><b>Ngozi Nezianya</b></sub><br /></td>
-  
+
 
 </table>
-

@@ -2,7 +2,7 @@
   <div class="home">
     <app-header :language="language.name" @language-selected="changeLanguage" @toggled-nav-bar="toggleNavBar" />
     <blm-banner v-if="initialSearch" @blm-resource-selected="selectBlm" />
-    <banner v-if="initialSearch && showBanner" @hide-banner="hideBanner" />
+    <banner v-if="showBanner" @hide-banner="hideBanner" />
     <div class="intro" :class="{ 'intro-centered': initialSearch }">
       <template v-if="initialSearch">
         <h4 class="introParagraph">{{ $t('about.front-page.p1') }}</h4>
@@ -32,7 +32,7 @@ import AppHeader from '@/components/Header.vue'
 import Search from '@/components/Search.vue'
 import Banner from '@/components/Banner.vue'
 import BlmBanner from '@/components/BlmBanner.vue'
-import { needs } from '@/constants'
+import { needs_name } from '@/resources/resources.js'
 export default {
   name: 'app',
   props: {
@@ -122,7 +122,7 @@ export default {
         this.nearLocation = null
       } else {
         // catch all - redirect to '/' - needs to be fixed atm I need to add any new page to this list!
-        if (!needs.includes(to.params.need) && !['/about-us', '/blm-statement'].includes(to.path)) {
+        if (!needs_name.includes(to.params.need) && !['/about-us', '/blm-statement'].includes(to.path)) {
           this.$router.push('/')
         } else {
           this.initialSearch = false

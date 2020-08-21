@@ -58,7 +58,9 @@ export default {
     },
     needOptions() {
       return [
+        // Placeholder
         { value: null, text: this.$tc('sidebar.what', 1), disabled: true },
+        // Food
         {
           label: this.$tc('category.food_resources', 1),
           options: [
