@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Results from '@/components/Results.vue'
 import AboutUs from '@/components/AboutUs.vue'
 import BlmStatement from '@/components/BlmStatement.vue'
+import LegalSupportHome from '@/components/LegalSupportHome.vue'
 
 Vue.use(Router)
 
@@ -17,6 +18,11 @@ export default new Router({
       path: '/blm-statement',
       name: 'BlmStatement',
       component: BlmStatement
+    },
+    {
+      path: '/legal-support',
+      name: 'LegalSupport',
+      component: LegalSupportHome
     },
     {
       path: '/:need',
