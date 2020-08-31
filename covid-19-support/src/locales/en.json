@@ -297,8 +297,34 @@
     "text_sub": "If you are selected for interviewing,  all sessions will be conducted remotely via phone / video chat, and  we will compensate you for your time. ",
     "header": "Help us serve you better."
   },
-  "legal-support": {
+  "faq": {
     "title": "Welcome to Legal Support",
-    "header": "Legal Support"
+    "header": "Know Your Rights",
+    "categories": {
+      "criminal-justice": {
+        "title": "Criminal Justice",
+        "icon": "fa-gavel"
+      },
+      "evictions": {
+        "title": "Evictions",
+        "icon": "fa-home"
+      },
+      "social-security": {
+        "title": "Social Security",
+        "icon": "fa-landmark"
+      },
+      "sexual-harrassment": {
+        "title": "Sexual Harrassment",
+        "icon": "fa-restroom"
+      },
+      "employee-benefits": {
+        "title": "Employee Benefits",
+        "icon": "fa-file-invoice-dollar"
+      },
+      "immigrant-rights": {
+        "title": "Immigrant Rights",
+        "icon": "fa-globe-americas"
+      }
+    }
   }
 }
