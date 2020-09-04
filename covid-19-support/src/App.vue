@@ -106,7 +106,8 @@ export default {
   },
   computed: {
     showSearchBar() {
-      if (this.$route.name == 'AboutUs' || this.$route.name == 'BlmStatement' || this.$route.name == 'FAQ') {
+      const pathList = [/about-us/, /blm-statement/, /faq/]
+      if (pathList.some((path) => path.test(this.$route.path))) {
         return false
       }
       return !this.isNavBarOpen || this.initialSearch
@@ -122,7 +123,8 @@ export default {
         this.nearLocation = null
       } else {
         // catch all - redirect to '/' - needs to be fixed atm I need to add any new page to this list!
-        if (!needs_name.includes(to.params.need) && !['/about-us', '/blm-statement', '/faq'].includes(to.path)) {
+        const pathList = [/about-us/, /blm-statement/, /faq/]
+        if (!needs_name.includes(to.params.need) && !pathList.some((path) => path.test(to.path))) {
           this.$router.push('/')
         } else {
           this.initialSearch = false

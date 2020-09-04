@@ -4,7 +4,8 @@ import Results from '@/components/Results.vue'
 import AboutUs from '@/components/AboutUs.vue'
 import BlmStatement from '@/components/BlmStatement.vue'
 import FAQHome from '@/components/FAQHome.vue'
-import FAQCategory from '@/components/FAQCategory.vue'
+import FAQMid from '@/components/FAQMid.vue'
+import FAQInner from '@/components/FAQInner.vue'
 
 Vue.use(Router)
 
@@ -27,8 +28,13 @@ export default new Router({
     },
     {
       path: '/faq/:category',
-      name: 'FAQCriminalJustice',
-      component: FAQCategory
+      name: 'FAQMid',
+      component: FAQMid
+    },
+    {
+      path: '/faq/:category/:id',
+      name: 'FAQInner',
+      component: FAQInner
     },
     {
       path: '/:need',

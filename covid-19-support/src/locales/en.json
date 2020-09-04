@@ -303,7 +303,83 @@
     "categories": {
       "criminal-justice": {
         "title": "Criminal Justice",
-        "icon": "fa-gavel"
+        "icon": "fa-gavel",
+        "content": [
+          {
+            "title": "I've been arrested",
+            "questions": [
+              {
+                "question": "What should I do?",
+                "answer": [
+                  "Generally the protocols for police arrests are not different from pre-COVID times, except that they are more likely to issue summons in the field rather than bringing detainees into a station for booking (<a href='https://www.ppic.org/blog/how-will-covid-19-affect-arrests-in-california/'>source</a>).",
+                  "You can find regular know-your-rights information for when you are stopped by the police at the ACLU Northern California Chapter’s <a href='https://www.aclunc.org/sites/default/files/kyr_police_en.pdf'>website</a>."
+                ]
+              },
+              {
+                "question": "What is the status of the courts?",
+                "answer": [
+                  "During a public health emergency like COVID-19, courts prioritize critical cases (i.e. bail hearings, emergency protective orders such as in domestic violence and child abuse cases, and contested quarantine and isolation orders) over other caseloads (<a href='https://www.nolo.com/legal-encyclopedia/how-is-the-coronavirus-covid-19-impacting-criminal-cases.html'>source</a>).",
+                  "You can find the most updated information about operation policies on each court's website for COVID-19 news. We list a few here for you.",
+                  "<a href='http://www.alameda.courts.ca.gov/Pages.aspx/COVID-19'>Alameda County Court Website</a>",
+                  "<a href='http://www.scscourt.org/general_info/news_media/covid19.shtml#resources'>Santa Clara County Court Website</a>",
+                  "<a href='https://www.sanmateocourt.org/covid19.pdf'>San Mateo County Court Website</a>"
+                ]
+              },
+              {
+                "question": "How can I pay bail during COVID-19?",
+                "answer": [
+                  "On April 6, the Judicial Council of California adopted 11 Emergency Rules and established that bail for infractions will be set at $0.00, while bail for technical violations of felony probation, Post Release Community Supervision (PRCS), or parole will be set at $5,000.00. The rules are repealed on June 10, but counties like Alameda have adopted their own “zero bail” emergency bail schedule.",
+                  "See the \"Bail Fund Resources\" section. TODO"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Someone I know has been arrested",
+            "questions": [
+              {
+                "question": "Can I attend their court hearing?",
+                "answer": [
+                  "Since most matters are being heard remotely through court call and a public access, listen-only line is also available. You can also check the most updated information on each court's website for COVID-19 news.",
+                  "See the \"Status of courts\" section for a list of website addresses. TODO"
+                ]
+              },
+              {
+                "question": "How can I help them apply for bail fund?",
+                "answer": [
+                  "See the \"Bail Fund Resources\" section. TODO"
+                ]
+              },
+              {
+                "question": "Can I visit them in incarceration?",
+                "answer": [
+                  "As part of CDCR’s COVID-19 prevention efforts, normal visiting will be canceled statewide until further notice. This includes non-contact visits, family visits, and the Division of Juvenile Justice. You can find updates on the CDCR <a href='https://www.cdcr.ca.gov/visitors/'>website</a> for visitation information."
+                ]
+              }
+            ]
+          }, 
+          {
+            "title": "I am looking for bail fund resources during COVID",
+            "questions": [
+              {
+                "question": "I’m looking for bail bonds for protesters.",
+                "answer": [
+                  "There are many organizations that provide bail fund resources for protesters. We list a few here for you:",
+                  "National Lawyers Guild (NLG) San Francisco Chapter Hotline:",
+                  "(415) 285-1011 (for protestors arrested) TODO SHOULD BE INDENTED",
+                  "(916) 500-4NLG (for friends and family) please provide the full name and a birthday of the arrested person.",
+                  "National bail fund network's <a href='https://bailfunds.github.io/#California'>list</a> of protest bail funds in California."
+                ]
+              },
+              {
+                "question": "I’m looking for bail resources for other charges.",
+                "answer": [
+                  "You can find bail resources at the National Bail Fund Network’s <a href='https://www.communityjusticeexchange.org/nbfn-directory#california'>website</a>."
+                ]
+              }
+            ]
+          }
+        ]
       },
       "evictions": {
         "title": "Evictions",
