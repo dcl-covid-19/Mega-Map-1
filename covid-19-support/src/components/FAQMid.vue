@@ -1,9 +1,9 @@
 <template>
   <b-container id="faq-mid">
     <h4 class="text-center mb-4">What best describes your situation?</h4>
-    <b-row v-for="(subsection, i) in content" v-bind:key="i" class="subsections" @click="subsectionClicked(i)">
+    <b-row v-for="(s, id) in num_subsections" v-bind:key="id" class="subsections" @click="subsectionClicked(id)">
       <b-button block>
-        {{ subsection.title }}
+        {{ $t(`faq.categories.${category}.content[${id}].title`) }}
         <i class="fas fa-chevron-right"></i>
       </b-button>
     </b-row>
@@ -17,7 +17,8 @@ export default {
   data() {
     let category = this.$route.params.category
     return {
-      content: en_json.faq.categories[category].content
+      category: category,
+      num_subsections: en_json.faq.categories[category].content.length
     }
   },
   methods: {

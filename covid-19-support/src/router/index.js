@@ -37,6 +37,11 @@ export default new Router({
       component: FAQInner
     },
     {
+      path: '/faq/:category/:id/:q_id',
+      name: 'FAQInner',
+      component: FAQInner
+    },
+    {
       path: '/:need',
       name: 'Results',
       component: Results,
