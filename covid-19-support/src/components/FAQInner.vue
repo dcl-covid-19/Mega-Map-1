@@ -29,6 +29,12 @@
         </b-collapse>
       </b-card>
     </div>
+    <b-row>
+      <b-button class="mt-4" variant="outline-primary" @click="backButtonClicked()">
+        <i class="fas fa-chevron-left"></i>
+        {{ $t(`faq.back_button`) }}
+      </b-button>
+    </b-row>
   </b-container>
 </template>
 
@@ -54,6 +60,9 @@ export default {
       this.id = route.params.id
       this.num_questions = en_json.faq.categories[this.category].content[this.id].questions.length
       this.num_answers_arr = en_json.faq.categories[this.category].content[this.id].questions.map((obj) => obj.answer.length)
+    },
+    backButtonClicked() {
+      this.$router.push(`/faq/${this.$route.params.category}`)
     }
   },
   // Catch route parameter changes and rerender (ex. /faq/subsection/1 => /faq/subsection/0)

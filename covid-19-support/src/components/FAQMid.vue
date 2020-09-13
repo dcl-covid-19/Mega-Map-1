@@ -9,6 +9,12 @@
         <i class="fas fa-chevron-right"></i>
       </b-button>
     </b-row>
+    <b-row>
+      <b-button class="mt-4" variant="outline-primary" @click="backButtonClicked()">
+        <i class="fas fa-chevron-left"></i>
+        {{ $t(`faq.header`) }}
+      </b-button>
+    </b-row>
   </b-container>
 </template>
 
@@ -26,6 +32,9 @@ export default {
   methods: {
     subsectionClicked(id) {
       this.$router.push(`/faq/${this.$route.params.category}/${id}`)
+    },
+    backButtonClicked() {
+      this.$router.push(`/faq`)
     }
   }
 }

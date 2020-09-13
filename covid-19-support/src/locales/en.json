@@ -303,6 +303,7 @@
     "home_help_text": "Select an area below to find out more about your rights.",
     "subcategory_header": "What best describes your situation?",
     "subcategory_help_text": "Click on the questions below to expand answers.",
+    "back_button": "Back",
     "categories": {
       "criminal-justice": {
         "title": "Criminal Justice",
