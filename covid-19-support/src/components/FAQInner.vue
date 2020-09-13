@@ -1,8 +1,9 @@
 <template>
   <b-container id="faq-inner">
-    <h4 class="text-center mb-4">
+    <h2 class="text-center mb-4">{{ $t(`faq.categories.${category}.title`) }}</h2>
+    <p class="text-center mb-4 subtitle">
       {{ $t(`faq.categories.${category}.content[${id}].title`) }}
-    </h4>
+    </p>
     <!-- Bootstrap accordion -->
     <div role="tablist">
       <b-card no-body class="m-1 accordion-item" v-for="(q, q_id) in num_questions" v-bind:key="q_id">
@@ -76,6 +77,11 @@ export default {
   max-width: 1024px;
   padding: 24px 24px 100px;
   margin: 0 auto;
+}
+
+p.subtitle {
+  font-size: 1.2rem;
+  color: $gray-600;
 }
 
 .collapsed > .show-when-open,

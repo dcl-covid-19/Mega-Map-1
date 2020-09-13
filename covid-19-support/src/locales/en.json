@@ -300,6 +300,7 @@
   "faq": {
     "title": "Welcome to Legal Support",
     "header": "Know Your Rights",
+    "subcategory_header": "What best describes your situation?",
     "categories": {
       "criminal-justice": {
         "title": "Criminal Justice",
