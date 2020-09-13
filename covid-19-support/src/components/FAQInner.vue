@@ -1,9 +1,7 @@
 <template>
   <b-container id="faq-inner">
     <h2 class="text-center mb-4">{{ $t(`faq.categories.${category}.title`) }}</h2>
-    <p class="text-center mb-4 subtitle">
-      {{ $t(`faq.categories.${category}.content[${id}].title`) }}
-    </p>
+    <p class="text-center mb-2 subtitle">{{ $t(`faq.categories.${category}.content[${id}].title`) }}</p>
     <!-- Bootstrap accordion -->
     <div role="tablist">
       <b-card no-body class="m-1 accordion-item" v-for="(q, q_id) in num_questions" v-bind:key="q_id">

@@ -1,7 +1,8 @@
 <template>
   <b-container id="faq-mid">
     <h2 class="text-center mb-4">{{ $t(`faq.categories.${category}.title`) }}</h2>
-    <p class="text-center mb-4 subtitle">{{ $t(`faq.subcategory_header`) }}</p>
+    <p class="text-center mb-2 subtitle">{{ $t(`faq.subcategory_header`) }}</p>
+    <p class="text-center mb-4 help-text">{{ $t(`faq.subcategory_help_text`) }}</p>
     <b-row v-for="(s, id) in num_subsections" v-bind:key="id" class="subsections" @click="subsectionClicked(id)">
       <b-button block>
         {{ $t(`faq.categories.${category}.content[${id}].title`) }}
@@ -33,7 +34,11 @@ export default {
 <style lang="scss">
 p.subtitle {
   font-size: 1.2rem;
-  color: $gray-600;
+  color: #aaa;
+}
+
+p.help-text {
+  color: $teal;
 }
 
 #faq-mid {

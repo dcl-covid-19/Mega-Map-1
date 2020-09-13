@@ -1,6 +1,7 @@
 <template>
   <div id="faq">
     <h2>{{ $t('faq.title') }}</h2>
+    <p class="help-text mt-4">{{ $t('faq.home_help_text') }}</p>
     <b-container>
       <b-row>
         <b-col v-for="(category, i) in category_keys" v-bind:key="i" class="category-card text-center" @click="categoryClicked(category)">
