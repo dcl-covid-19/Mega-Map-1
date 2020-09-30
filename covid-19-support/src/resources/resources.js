@@ -105,15 +105,48 @@ const blm = {
   display_map: false,
   badges: [
     { var: 'open_today', label: 'label.open_today' },
-    { var: 'bob', label: 'label.bob' }
+    { var: 'bob', label: 'label.bob' },
+    { var: 'catering', label: 'label.catering' },
+    { var: 'in_store_pickup', label: 'label.takeaway' },
+    { var: 'delivery', label: 'label.delivery' }
   ],
   filters: [
     { var: 'catering', label: 'label.catering' },
     { var: 'in_store_pickup', label: 'label.takeaway', display_map: true },
-    { var: 'delivery', label: 'label.delivery', display_map: true }
+    { var: 'delivery', label: 'label.delivery', display_map: true },
+    { var: 'open_today', label: 'label.open_today' }
   ],
   sort: 'open_distance'
 }
+
+// Eviction Resources
+const eviction_resources = {
+  name: 'eviction_resources',
+  sql_query: " WHERE resource = 'legal_general_info' AND eviction = 1",
+  display_map: false,
+  badges: [
+    { var: 'open_today', label: 'label.open_today' },
+    { var: 'city', label: 'label.city' }
+  ],
+  filters: [],
+  sort: 'open_distance'
+}
+
+/*
+// Black Owned Restaurants
+const black_owned_restaurants = {
+  name: 'black_owned_restaurants',
+  sql_query: " WHERE resource = 'restaurant'",
+  display_map: true,
+  badges: [
+    { var: 'open_today', label: 'label.open_today' },
+    { var: 'catering', label: 'label.catering' },
+    { var: 'delivery', label: 'label.delivery' }
+  ],
+  filters: [],
+  sort: 'open_distance'
+}
+*/
 
 // UPDATE WHEN CREATING / REMOVING RESOURCES
 export const needs = {
@@ -123,7 +156,17 @@ export const needs = {
   legal_assistance: legal_assistance,
   mental_health: mental_health,
   health: health,
-  blm: blm
+  blm: blm,
+  eviction_resources: eviction_resources
 }
 
-export const needs_name = ['free_grocery', 'meal', 'snap_wic_retailer', 'legal_assistance', 'mental_health', 'health', 'blm']
+export const needs_name = [
+  'free_grocery',
+  'meal',
+  'snap_wic_retailer',
+  'legal_assistance',
+  'mental_health',
+  'health',
+  'blm',
+  'eviction_resources'
+]

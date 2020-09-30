@@ -25,6 +25,7 @@
             :title="getDomain(business.email)"
             :link="'mailto:' + business.email"
           />
+          <icon-list-item v-if="!!business.evict_end_date" icon="fas fa-calendar-alt" :title="business.evict_end_date" />
         </p>
         <p>
           <opening-hours :business="business" :title="$t('label.openinghours')"></opening-hours>

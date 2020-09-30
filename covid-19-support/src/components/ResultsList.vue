@@ -49,6 +49,7 @@
                   <span v-if="item.isOpen" class="badge open">{{ getOpenMessage(item) }}</span>
                 </template>
                 <template v-else>
+                  <span v-if="badge.var == 'city' && item[badge.var] != ''" class="badge">{{ item[badge.var] }}</span>
                   <span v-if="item[badge.var] == 1" class="badge">{{ $t(badge.label) }}</span>
                 </template>
               </div>
