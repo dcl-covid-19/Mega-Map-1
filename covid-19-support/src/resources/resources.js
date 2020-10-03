@@ -52,7 +52,7 @@ const snap_wic_retailer = {
 // Legal assistance
 const legal_assistance = {
   name: 'legal_assistance',
-  sql_query: " WHERE resource = 'legal_services' AND status = 1",
+  sql_query: " WHERE resource = 'legal' AND status = 1",
   display_map: false,
   badges: [
     { var: 'open_today', label: 'label.open_today' },
@@ -70,7 +70,7 @@ const legal_assistance = {
 // Mental health
 const mental_health = {
   name: 'mental_health',
-  sql_query: " WHERE resource = 'health' AND med_mental_health = 1 AND status = 1",
+  sql_query: " WHERE resource = 'mental_health' AND med_mental_health = 1 AND status = 1",
   display_map: false,
   badges: [
     { var: 'open_today', label: 'label.open_today' },
@@ -108,7 +108,6 @@ const blm = {
     { var: 'bob', label: 'label.bob' }
   ],
   filters: [
-    { var: 'catering', label: 'label.catering' },
     { var: 'in_store_pickup', label: 'label.takeaway', display_map: true },
     { var: 'delivery', label: 'label.delivery', display_map: true }
   ],

@@ -11,45 +11,10 @@ export function businessIcon(business) {
         return 'fas fa-store'
       }
       return 'fas fa-shopping-basket'
-    default:
-  }
-
-  var cuisine = business.cuisine
-  var item = cuisine.indexOf(',') > 0 ? cuisine.toLowerCase().substr(0, cuisine.indexOf(',')).trim() : cuisine.toLowerCase().trim()
-  switch (item) {
-    case 'burgers':
-      return 'fas fa-hamburger'
-    case 'cheese':
-      return 'fas fa-cheese'
-    case 'beer':
-    case 'craft beer':
-      return 'fas fa-beer'
-    case 'pizza':
-      return 'fas fa-pizza-slice'
-    case 'mexican':
-      return 'fas fa-pepper-hot'
-    case 'wine':
-      return 'fas fa-wine-glass-alt'
-    case 'fish':
-    case 'seafood':
-      return 'fas fa-fish'
-    case 'ice cream':
-      return 'fas fa-ice-cream'
-    case 'texan':
-      return 'fas fa-hat-cowboy'
-    case 'chicken':
-      return 'fas fa-drumstick-bite'
-    case 'sandwiches':
-      return 'fas fa-bread-slice'
-    case 'american':
-      return 'fas fa-flag-usa'
-    case 'vegan':
-    case 'vegetarian':
-      return 'fas fa-carrot'
-    case 'market':
-      return 'fas fa-store'
-    default:
+    case 'meal':
       return 'fas fa-utensils'
+    default:
+      return 'fas fa-question'
   }
 }
 

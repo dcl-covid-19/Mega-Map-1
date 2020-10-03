@@ -16,7 +16,6 @@ export const booleanFilters = [
   'legal_healthcare',
   'legal_housing',
   'legal_immigration',
-  'catering',
   'in_store_pickup',
   'delivery'
 ]

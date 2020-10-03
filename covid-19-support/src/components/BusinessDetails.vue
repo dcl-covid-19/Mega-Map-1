@@ -4,10 +4,7 @@
       <div>
         <p>
           <icon-list-item v-if="business.discount_medical == 1" icon="fas fa-user-md" :title="$tc('label.discount_medical', 1)" />
-          <icon-list-item v-if="business.family_meal == 1" icon="fas fa-user-friends" :title="$tc('category.family', 2)" />
           <icon-list-item v-if="business.meal_student == 1" icon="fas fa-school" :title="$tc('label.meal_student', 1)" />
-          <icon-list-item v-if="business.meal_public == 1" icon="fas fa-users" :title="$tc('label.meal_public', 1)" />
-          <icon-list-item v-if="business.free_produce == 1" icon="fas fa-apple-alt" :title="$tc('label.free_produce', 1)" />
           <icon-list-item v-if="business.free_groceries == 1" icon="fas fa-shopping-basket" :title="$tc('label.free_groceries', 1)" />
           <icon-list-item v-if="business.curbside_pickup == 1" icon="fas fa-car" :title="$tc('label.curbside_pickup', 1)" />
           <icon-list-item v-if="business.drive_thru == 1" icon="fas fa-car-side" :title="$t('label.drive_thru')" />
@@ -29,11 +26,6 @@
         <p>
           <opening-hours :business="business" :title="$t('label.openinghours')"></opening-hours>
           <opening-hours v-if="business.special_hours" :business="business" :title="$t('label.seniorhours')" :senior="true"></opening-hours>
-          <template v-if="!!business.offers">
-            <p>
-              <b>{{ $t('label.offers') }}:</b> {{ business.offers }}
-            </p>
-          </template>
           <template v-if="!!business.notes && !legalResources && !mentalResources && !medicalResources">
             <p>
               <b>{{ $t('label.notes') }}:</b> {{ getTranslation(business, 'notes') }}
