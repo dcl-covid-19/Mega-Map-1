@@ -98,9 +98,9 @@ const health = {
   sort: 'hotline_distance'
 }
 
-// BLM
-const blm = {
-  name: 'blm',
+// Black owned restaurants
+const black_owned_restaurants = {
+  name: 'black_owned_restaurants',
   sql_query: " WHERE resource = 'restaurant' AND status = 1 AND bob = 1",
   display_map: false,
   badges: [
@@ -132,21 +132,31 @@ const eviction_resources = {
   sort: 'open_distance'
 }
 
-/*
-// Black Owned Restaurants
-const black_owned_restaurants = {
-  name: 'black_owned_restaurants',
-  sql_query: " WHERE resource = 'restaurant'",
-  display_map: true,
+// DV Resources
+const dv_resources = {
+  name: 'dv_resources',
+  sql_query: " WHERE resource = 'dv_resources'",
+  display_map: false,
   badges: [
     { var: 'open_today', label: 'label.open_today' },
-    { var: 'catering', label: 'label.catering' },
-    { var: 'delivery', label: 'label.delivery' }
+    { var: 'city', label: 'label.city' }
   ],
   filters: [],
   sort: 'open_distance'
 }
-*/
+
+// Cash Resources
+const cash_assistance = {
+  name: 'cash_assistance',
+  sql_query: " WHERE resource = 'legal_general_info' AND eviction = 1",
+  display_map: false,
+  badges: [
+    { var: 'open_today', label: 'label.open_today' },
+    { var: 'city', label: 'label.city' }
+  ],
+  filters: [],
+  sort: 'open_distance'
+}
 
 // UPDATE WHEN CREATING / REMOVING RESOURCES
 export const needs = {
@@ -156,17 +166,21 @@ export const needs = {
   legal_assistance: legal_assistance,
   mental_health: mental_health,
   health: health,
-  blm: blm,
-  eviction_resources: eviction_resources
+  black_owned_restaurants: black_owned_restaurants,
+  eviction_resources: eviction_resources,
+  dv_resources: dv_resources,
+  cash_assistance: cash_assistance
 }
 
 export const needs_name = [
   'free_grocery',
   'meal',
+  'cash_assistance',
   'snap_wic_retailer',
   'legal_assistance',
   'mental_health',
+  'dv_resources',
   'health',
-  'blm',
+  'black_owned_restaurants',
   'eviction_resources'
 ]

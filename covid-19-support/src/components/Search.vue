@@ -78,6 +78,8 @@ export default {
         //   ]
         // },
         { value: 'mental_health', text: this.$t('category.mental_health_resources') },
+        { value: 'dv_resources', text: this.$t('category.dv_resources') },
+        { value: 'cash_assistance', text: this.$t('category.cash_assistance') },
         // {
         //   label: this.$tc('category.mental_health_resources', 1),
         //   options: [
@@ -95,7 +97,7 @@ export default {
         // }
         // { value: 'blm', text: this.$t('category.blm') }
         { value: 'eviction_resources', text: this.$t('category.eviction_resources') },
-        { value: 'blm', text: this.$t('category.blm') }
+        { value: 'black_owned_restaurants', text: this.$t('category.black_owned_restaurants') }
       ]
     }
   },

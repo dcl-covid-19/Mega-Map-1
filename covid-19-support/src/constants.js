@@ -38,7 +38,7 @@ export const mapBoxAttribution =
 // CARTO DB VARIABLES
 export const cartoBaseURL = 'https://dcl-mega-map.carto.com/api/v2/sql?'
 
-export const cartoDBName = 'mega_map_database'
+export const cartoDBName = 'airtable'
 
 export const zipDBName = 'zipcode_db'
 
