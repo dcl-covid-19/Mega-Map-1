@@ -8,7 +8,7 @@
 ![Bay Area Community Resources Website](/covid-19-support/src/images/BAYCR.png)
 
 We are a volunteer-driven, open-source project to help communities navigate the
-COVID crisis by providing information on public resources. This project began as
+COVID crisis by providing information on public resources. We are part of the organization [unBox](https://www.unboxproject.org/). This project began as
 a Bay Area school meals map, and now provides information on resources such
 as locations and schedules for free meals, food assistance, legal assistance,
 and medical help.
