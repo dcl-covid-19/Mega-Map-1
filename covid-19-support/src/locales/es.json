@@ -118,7 +118,7 @@
     "farm": "Granja o Mercado de Granjeros | Granjas y Mercados de Agricultores",
     "food_bev": "Comida y bebida de especialidad",
     "free_grocery": "Comestible gratis|Comestibles gratis",
-    "free_food": "Comida gratis para el publico",
+    "free_food": "Comida gratis para el público",
     "grocery": "Comestibles",
     "meal": "Comida gratis | Comidas gratis",
     "ballot_drop": "Urna de la boleta",
@@ -132,7 +132,10 @@
     "legal_resources": "Recursos Legales",
     "medical_resources": "Recursos Médicos",
     "mental_health_resources": "Recursos de Salud Mental",
-    "healthcare": "Cuidado médico"
+    "healthcare": "Cuidado médico",
+    "dv_resources": "Recursos para Violencia Domestica",
+    "eviction_resources": "Recursos de desalojo",
+    "bob": "Restaurantes"
   },
   "dayofweek": {
     "any": "Alguna",
@@ -217,7 +220,14 @@
     "submit": "Envia",
     "last_updated": "Los detalles fueron revisados",
     "in_store_pickup": "Para llevar",
-    "dv_legal": "Apoyo legal"
+    "catering": "Servicios de comidas",
+    "dv_legal": "Apoyo legal para VD",
+    "dv_housing": "Apoyo de la vivienda para VD",
+    "dv_medical": "Apoyo médico de VD",
+    "dv_crisis": "Apoyo de crisis de VD",
+    "dv_mental_health": "Apoyo de salud mental de VD",
+    "apply": "Aplique los filtros",
+    "filters": "Filtros"
   },
   "health": {
     "med_testing": "Prueba de COVID",
@@ -241,6 +251,7 @@
     "fr": "francés",
     "ja": "japonés",
     "ko": "coreano",
+    "ms": "Malaya",
     "zh": "Chino simplificado",
     "vi": "Vietnamita",
     "tl": "Tagalo"
@@ -328,7 +339,7 @@
   "ux_study": {
     "text_main": "Queremos aprender más sobre lo que es más importante para usted en este momento y como podemos mejorar el sitio web.",
     "link_text": "Regístrese ahora.",
-    "link_url": "https://forms.gle/uLPX4UtJoed3DWsS9",
+    "link_url": "https://bit.ly/bac-interviews",
     "text_sub": "Si lo seleccionan para una entrevista, todas las sesiones se realizarán por teléfono o video, y le compensaremos por su tiempo.",
     "header": "Ayúdanos a servirle mejor."
   },

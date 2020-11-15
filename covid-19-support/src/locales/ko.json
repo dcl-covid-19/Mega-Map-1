@@ -82,7 +82,8 @@
       "p1": {
         "text": "추가 자료 제공 또는 부정확한 정보 혹은 다른 문의 사항이 있으시면 {0} 으로 연락 바랍니다.",
         "link": "baycommunityresource@gmail.com"
-      }
+      },
+      "contact-us-header": "여기에서 저희에게 연락하십시오"
     },
     "disclaimer": {
       "header": "면책 조항",
@@ -100,6 +101,7 @@
       "resource": "자료 코디네이터",
       "translate": "번역가",
       "dqual": "정보의 질",
+      "internal-community": "내부 커뮤니티",
       "projl": "프로젝트 선임자",
       "devlead": "게발 선임자",
       "dqlead": "정보의 질 선임자"
@@ -116,6 +118,7 @@
     "farm": "농장 & 시장 | 농장 & 시장",
     "food_bev": "전문 음식과 음료",
     "free_grocery": "무료 식품| 무료 식품",
+    "free_food": "대중을위한 무료 음식",
     "grocery": "식료품 | 식료품 점",
     "meal": "무료 식사 | 무료 식사",
     "petsupplies": "애완 용품",
@@ -128,7 +131,10 @@
     "legal_resources": "법률 자원",
     "medical_resources": "의료 자원",
     "mental_health_resources": "정신과 자원",
-    "healthcare": "보건의료"
+    "healthcare": "보건의료",
+    "dv_resources": "가정 폭력 자료",
+    "eviction_resources": "퇴거 자원",
+    "bob": "흑인 소유 레스토랑"
   },
   "dayofweek": {
     "any": "어떤",
@@ -211,7 +217,16 @@
     "suggest_an_edit": "수정제안",
     "reset": "재설정",
     "submit": "제출",
-    "last_updated": "세부사항은 최종적으로 업데이트 됬습니다."
+    "last_updated": "세부사항은 최종적으로 업데이트 됬습니다.",
+    "in_store_pickup": "테이크 아웃",
+    "catering": "케이터링",
+    "dv_legal": "DV 법적 지원",
+    "dv_housing": "DV 주택 지원",
+    "dv_medical": "DV 의료 지원",
+    "dv_crisis": "DV 위기 지원",
+    "dv_mental_health": "DV 정신 건강 지원",
+    "apply": "필터 적용",
+    "filters": "필터"
   },
   "health": {
     "med_testing": "COVID 테스트",
@@ -219,10 +234,10 @@
     "med_pediatrics": "소아과",
     "med_senior": "노인 간호",
     "med_women": "여성 건강 관리",
-    "med_urgent_care": "긴급 치료",
+    "med_urgent_care": "응급 치료",
     "med_dental": "치과 치료",
     "med_vision": "시력 관리",
-    "med_pharmacy": "조제",
+    "med_pharmacy": "약국",
     "med_mental_health": "정신 건강 관리",
     "med_hotline": "핫라인",
     "med_addiction": "중독 및 회복 지원",
@@ -235,6 +250,7 @@
     "fr": "프랑스어",
     "ja": "일본어",
     "ko": "한국어",
+    "ms": "말레이 사람",
     "zh": "중국어",
     "vi": "베트남어",
     "tl": "필리핀어"
@@ -318,5 +334,12 @@
     "lead": "7월15일까지 P-EBT 를 지원하세요.",
     "link": "지금 지원 하세요.",
     "link_url": "https://ca.p-ebt.org/en/"
+  },
+  "ux_study": {
+    "text_main": "현재 가장 중요한 사항에 대해 자세히 알아보고 웹 사이트를 개선하는 방법에 대한 의견을 받고 싶습니다.",
+    "link_text": "지금 등록하세요.",
+    "link_url": "https://bit.ly/bac-interviews",
+    "text_sub": "인터뷰 대상자로 선정되면 모든 세션은 전화 / 화상 채팅을 통해 원격으로 진행되며 시간을 보상 해드립니다.",
+    "header": "더 나은 서비스를 제공하도록 도와주세요."
   }
 }

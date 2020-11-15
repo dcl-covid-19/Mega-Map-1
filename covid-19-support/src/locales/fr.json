@@ -51,6 +51,9 @@
       "link0": "CARTO",
       "link1": "Mapbox"
     },
+    "our-team": {
+      "header": "Notre équipe"
+    },
     "dataaccess": {
       "link": "Big Local News"
     }
@@ -65,7 +68,9 @@
     "pharmacy": "Pharmacie | Pharmacies",
     "restaurant": "Restaurant | Restaurants",
     "school": "Repas scolaire | Repas scolaires",
-    "cash_assistance": "Aide en espèces"
+    "cash_assistance": "Aide en espèces",
+    "food_resources": "Ressources alimentaires",
+    "legal_resources": "Ressources juridiques"
   },
   "dayofweek": {
     "any": "Tout",
@@ -95,6 +100,7 @@
     "email_lowercase": "email",
     "farmers_market": "Marché fermier | Marchés fermiers",
     "farm_pick_up": "Ramassage à la ferme",
+    "free": "Ressource gratuite",
     "free_groceries": "Emplacement d'épicerie gratuits|Emplacements d'épicerie gratuits",
     "freemeals": "Lieu de repas gratuits|Lieux de repas gratuits",
     "free_produce": "Lieu de production gratuit|Lieux de production gratuit",
@@ -165,7 +171,8 @@
     "stayhome": "Si vous êtes malade, restez à la maison.",
     "washhands": "Lavez-vous souvent les mains.",
     "what-do-you-need": "De quoi avez-vous besoin?",
-    "when-do-you-need-it": "Quand en avez-vous besoin?"
+    "when-do-you-need-it": "Quand en avez-vous besoin?",
+    "what": "Ressource..."
   },
   "title": "Prise en charge de {0} COVID",
   "DO NOT TRANSLATE FROM HERE DOWN": "DO NOT TRANSLATE FROM HERE DOWN"

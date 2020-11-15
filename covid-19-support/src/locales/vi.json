@@ -101,6 +101,7 @@
       "resource": "Người điều phối các nguồn hỗ trợ",
       "translate": "người thông dịch",
       "dqual": "chất lượng dữ liệu",
+      "internal-community": "cộng đồng nội bộ",
       "projl": "trưởng dự án",
       "devlead": "trưởng khâu phát triển",
       "dqlead": "trưởng khâu chất lượng dữ liệu"
@@ -117,6 +118,7 @@
     "farm": "Chợ nông sản|Các chợ nông sản",
     "food_bev": "Đồ ăn và đồ uống đặc trưng",
     "free_grocery": "Lương thực miễn phí|Các lương thực miễn phí",
+    "free_food": "Thức ăn miễn phí cho công chúng",
     "grocery": "Lương thực|Lương thực",
     "meal": "Bữa ăn miễn phí|Những bữa ăn miễn phí",
     "ballot_drop": "Địa điểm bỏ phiếu bầu",
@@ -129,7 +131,11 @@
     "food_resources": "Hỗ trợ thực phẩm",
     "legal_resources": "Hỗ trợ pháp lý",
     "medical_resources": "Hỗ trợ y tế",
-    "mental_health_resources": "Hỗ trợ sức khỏe tinh thần"
+    "mental_health_resources": "Hỗ trợ sức khỏe tinh thần",
+    "healthcare": "Chăm sóc sức khỏe",
+    "dv_resources": "Tài nguyên về Bạo lực Gia đình",
+    "eviction_resources": "Tài nguyên trục xuất",
+    "bob": "Nhà hàng do người da đen sở hữu"
   },
   "dayofweek": {
     "any": "Ngày bất kỳ",
@@ -154,7 +160,7 @@
     "closedonday": "Đóng cửa (vào ngày đang được chọn)",
     "curbside_pickup": "Nhận hàng tại điểm hẹn",
     "curbside_or_delivery": "Giao hàng tận nơi hoặc nhận hàng tại điểm hẹn",
-    "delivery": "Giao hàng tận nơi",
+    "delivery": "Chuyển",
     "discount_medical": "Ưu đãi cho nhân viên y tế",
     "discounts": "Giảm giá",
     "drive_thru": "Lái xe tạt qua",
@@ -211,7 +217,17 @@
     "zipcode": "Mã zipcode",
     "suggest_an_edit": "Đề nghị chỉnh sửa một cái gì đó",
     "reset": "Làm lại",
-    "submit": "Gửi đi"
+    "submit": "Gửi đi",
+    "last_updated": "Thông tin chi tiết được cập nhật lần cuối",
+    "in_store_pickup": "Lấy đi",
+    "catering": "Dịch vụ ăn uống",
+    "dv_legal": "DV hỗ trợ pháp lý",
+    "dv_housing": "DV hỗ trợ nhà ở",
+    "dv_medical": "DV hỗ trợ y tế",
+    "dv_crisis": "Hỗ trợ khủng hoảng DV",
+    "dv_mental_health": "DV hỗ trợ sức khỏe tâm thần",
+    "apply": "Áp dụng các bộ lọc",
+    "filters": "Bộ lọc"
   },
   "health": {
     "med_testing": "Kiểm tra COVID",
@@ -297,7 +313,8 @@
     "area_not_covered": "Chúng tôi không bao gồm khu vực này.",
     "select_resource": "Chọn một nguồn hỗ trợ.",
     "provide_zip": "Cung cấp mã zipcode",
-    "error_getting_zip": "Mã zipcode quý vị cung cấp có lỗi. Xin vui lòng thử lại."
+    "error_getting_zip": "Mã zipcode quý vị cung cấp có lỗi. Xin vui lòng thử lại.",
+    "error_loading_results": "Có một lỗi. Vui lòng thử lại."
   },
   "edit": {
     "intro": "Xin cập nhật thông tin cho địa điểm này trong mẫu đơn dưới đây. Chúng tôi thật sự cảm ơn sự giúp đỡ của bạn trong việc giữ cho các nguồn hỗ trợ này luôn được cập nhật.",
@@ -318,5 +335,12 @@
     "lead": "Đăng ký xin P-EBT trước ngày 15 tháng 7.",
     "link": "Đăng ký ngay bây giờ",
     "link_url": "https://ca.p-ebt.org/en/"
+  },
+  "ux_study": {
+    "text_main": "Chúng tôi muốn tìm hiểu thêm về điều quan tâm hàng đầu đối với bạn vào lúc này và nhận được ý kiến đóng góp của bạn về cách cải thiện trang web.",
+    "link_text": "Đăng ký ngay.",
+    "link_url": "https://bit.ly/bac-interviews",
+    "text_sub": "Nếu bạn được chọn để phỏng vấn, tất cả các phiên sẽ được thực hiện từ xa thông qua trò chuyện điện thoại / video và chúng tôi sẽ bù lại thời gian cho bạn.",
+    "header": "Hãy giúp chúng tôi phục vụ bạn tốt hơn."
   }
 }

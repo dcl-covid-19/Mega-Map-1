@@ -82,7 +82,8 @@
       "p1": {
         "text": "For questions on any data additions or inaccuracies, or for any other questions, please contact {0}.",
         "link": "baycommunityresource@gmail.com"
-      }
+      },
+      "contact-us-header": "Contact us here"
     },
     "disclaimer": {
       "header": "Disclaimer",
@@ -117,7 +118,7 @@
     "farm": "Farm or farmer market|Farms & farmers' markets",
     "food_bev": "Speciality food & beverage",
     "free_grocery": "Free grocery|Free groceries",
-    "free_food": "Free food for public",
+    "free_food": "Free food for the public",
     "grocery": "Grocery|Groceries",
     "meal": "Free prepared meal|Free prepared meals",
     "ballot_drop": "Ballot drop off locations",
@@ -132,9 +133,9 @@
     "medical_resources": "Medical resources",
     "mental_health_resources": "Mental health resources",
     "healthcare": "Healthcare",
+    "dv_resources": "Domestic Violence resources",
     "eviction_resources": "Eviction resources",
-    "bob": "Black owned restaurants",
-    "dv_resources": "Domestic Violence resources"
+    "bob": "Black owned restaurants"
   },
   "dayofweek": {
     "any": "Any",
@@ -220,13 +221,13 @@
     "last_updated": "Details last updated",
     "in_store_pickup": "Take-away",
     "catering": "Catering",
-    "dv_legal": "Legal support",
-    "dv_housing": "Housing support",
-    "dv_medical": "Medical support",
-    "dv_crisis": "Crisis support",
+    "dv_legal": "DV legal support",
+    "dv_housing": "DV housing support",
+    "dv_medical": "DV medical support",
+    "dv_crisis": "DV crisis support",
+    "dv_mental_health": "DV mental health support",
     "apply": "Apply filters",
-    "filters": "Filters",
-    "dv_mental_health": "Mental health support"
+    "filters": "Filters"
   },
   "health": {
     "med_testing": "COVID Testing",
@@ -338,7 +339,7 @@
   "ux_study": {
     "text_main": "We want to learn more about what is top of mind for you at this time and get your input on how to improve the website.",
     "link_text": "Sign up now.",
-    "link_url": "https://forms.gle/v4FNDDReXXiUtAP76",
+    "link_url": "https://bit.ly/bac-interviews",
     "text_sub": "If you are selected for interviewing,  all sessions will be conducted remotely via phone / video chat, and  we will compensate you for your time.",
     "header": "Help us serve you better."
   },

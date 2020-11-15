@@ -101,6 +101,7 @@
       "resource": "资源协调员",
       "translate": "翻译员",
       "dqual": "数据质量",
+      "internal-community": "内部社区",
       "projl": "项目负责人",
       "devlead": "开发负责人",
       "dqlead": "数据质量负责人"
@@ -117,6 +118,7 @@
     "farm": "农场或农贸市场|农场与农贸市场",
     "food_bev": "特殊食物及饮品",
     "free_grocery": "免费超市",
+    "free_food": "公众免费食物",
     "grocery": "杂货|杂货",
     "meal": "免费餐|免费餐",
     "ballot_drop": "選票投放箱",
@@ -129,7 +131,11 @@
     "food_resources": "食物资源",
     "legal_resources": "法律资源",
     "medical_resources": "医疗资源",
-    "mental_health_resources": "心理健康资源"
+    "mental_health_resources": "心理健康资源",
+    "healthcare": "医疗",
+    "dv_resources": "家庭暴力帮助",
+    "eviction_resources": "驱逐住房帮助",
+    "bob": "黑人所属餐馆"
   },
   "dayofweek": {
     "any": "任何",
@@ -154,7 +160,7 @@
     "closedonday": "休馆（当前选定日期）",
     "curbside_pickup": "路边捡拾",
     "curbside_or_delivery": "送餐或者路边提餐",
-    "delivery": "交货",
+    "delivery": "送货上门",
     "discount_medical": "医务人员折扣|医务人员折扣",
     "discounts": "折扣",
     "drive_thru": "得来速",
@@ -211,19 +217,29 @@
     "zipcode": "邮编",
     "suggest_an_edit": "提供编辑建议",
     "reset": "重制",
-    "submit": "提交"
+    "submit": "提交",
+    "last_updated": "细节最近更新",
+    "in_store_pickup": "打包",
+    "catering": "提供餐饮",
+    "dv_legal": "法律支持",
+    "dv_housing": "住房支持",
+    "dv_medical": "医疗支持",
+    "dv_crisis": "危机支持",
+    "dv_mental_health": "心理健康支持",
+    "apply": "过滤选项",
+    "filters": "过滤"
   },
   "health": {
     "med_testing": "COVID测试",
     "med_primary_care": "初级卫生保健",
     "med_pediatrics": "儿科",
-    "med_senior": "高级护理",
+    "med_senior": "老年护理",
     "med_women": "妇女保健",
     "med_urgent_care": "紧急护理",
     "med_dental": "牙齿保健",
     "med_vision": "视力保健",
     "med_pharmacy": "药店",
-    "med_mental_health": "精神健康",
+    "med_mental_health": "心理健康",
     "med_hotline": "热线",
     "med_addiction": "成瘾和恢复支持",
     "med_domestic_violence": "家庭暴力受害者的支持"
@@ -235,6 +251,7 @@
     "fr": "法国",
     "ja": "日本",
     "ko": "朝鲜的",
+    "ms": "马来语",
     "zh": "简体中文",
     "vi": "越南的",
     "tl": "他加禄的"
@@ -296,7 +313,8 @@
     "area_not_covered": "我们不覆盖这个地区",
     "select_resource": "选择一种资源",
     "provide_zip": "提供一个邮编",
-    "error_getting_zip": "输入邮编有误，请重试"
+    "error_getting_zip": "输入邮编有误，请重试",
+    "error_loading_results": "有错误，请重试"
   },
   "edit": {
     "intro": "请更新以下的地址的信息。我们非常感谢您能帮助我们确保信息更新。",
@@ -317,5 +335,12 @@
     "lead": "七月15日前申请P-EBT",
     "link": "立即申请",
     "link_url": "https://ca.p-ebt.org/zh"
+  },
+  "ux_study": {
+    "text_main": "我们想了解目前你最在意的问题以及我们可以改进的方面",
+    "link_text": "现在报名",
+    "link_url": "https://bit.ly/bac-interviews",
+    "text_sub": "如果你被选为采访对象，所有采访都会远程通过电话或视频的方式进行，并且我们会对你进行有偿补贴。",
+    "header": "帮我们为您提供更好的服务。"
   }
 }
