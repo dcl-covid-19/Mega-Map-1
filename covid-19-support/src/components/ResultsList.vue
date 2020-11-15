@@ -37,7 +37,10 @@
                   <a class="resultContact" :href="'tel:' + item.contact">{{ item.contact }}</a>
                 </span>
                 <!-- Legal resource description -->
-                <span v-if="(legalResources || medicalResources || mentalResources || cashResources) && !!item.notes" class="resultNotes">
+                <span
+                  v-if="(legalResources || medicalResources || mentalResources || cashResources || dvResources) && !!item.notes"
+                  class="resultNotes"
+                >
                   <b>{{ $t('label.notes') }}:</b>
                   {{ getTranslation(item, 'notes') }}
                 </span>
@@ -70,6 +73,13 @@
               <span v-if="item.fin_legal == 1" class="badge">{{ $tc('label.fin_legal') }}</span>
               <span v-if="item.fin_medical == 1" class="badge">{{ $tc('label.fin_medical') }}</span>
               <span v-if="item.fin_utilities == 1" class="badge">{{ $tc('label.fin_utilities') }}</span>
+              <!-- Domestic Violence badges -->
+              <span v-if="item.dv_medical == 1" class="badge">{{ $tc('label.dv_medical') }} </span>
+              <span v-if="item.dv_mental_health == 1" class="badge">{{ $tc('label.dv_mental_health') }} </span>
+              <span v-if="item.dv_housing == 1" class="badge">{{ $tc('label.dv_housing') }} </span>
+              <span v-if="item.dv_legal == 1" class="badge">{{ $tc('label.dv_legal') }} </span>
+              <span v-if="item.dv_referral == 1" class="badge">{{ $tc('label.dv_referral') }} </span>
+              <span v-if="item.dv_crisis == 1" class="badge">{{ $tc('label.dv_crisis') }} </span>
               <!-- End Badges -->
             </div>
             <i class="fas fa-chevron-right fa-lg" :class="{ 'fa-rotate-90': showDetails && item.cartodb_id == resource.resourceId }"></i>
