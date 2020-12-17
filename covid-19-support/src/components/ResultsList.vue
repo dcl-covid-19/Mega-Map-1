@@ -66,7 +66,7 @@
               <span v-if="item.legal_worker_protection == 1" class="badge">{{ $tc('legal.legal_worker_protection') }}</span>
               <span v-if="item.legal_healthcare == 1" class="badge">{{ $tc('legal.legal_healthcare') }}</span>
               <span v-if="item.legal_housing == 1" class="badge">{{ $tc('legal.legal_housing') }}</span>
-              <span v-if="item.legal_housing == 1" class="badge">{{ $tc('legal.legal_immigration') }}</span>
+              <span v-if="item.legal_immigration == 1" class="badge">{{ $tc('legal.legal_immigration') }}</span>
               <!-- Cash badges -->
               <span v-if="item.fin_grocery == 1" class="badge">{{ $tc('label.fin_grocery') }}</span>
               <span v-if="item.fin_housing == 1" class="badge">{{ $tc('label.fin_housing') }}</span>

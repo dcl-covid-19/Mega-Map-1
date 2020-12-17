@@ -221,11 +221,11 @@
     "last_updated": "细节最近更新",
     "in_store_pickup": "打包",
     "catering": "提供餐饮",
-    "dv_legal": "法律支持",
-    "dv_housing": "住房支持",
-    "dv_medical": "医疗支持",
-    "dv_crisis": "危机支持",
-    "dv_mental_health": "心理健康支持",
+    "dv_legal": "家庭暴力法律支持",
+    "dv_housing": "家庭暴力住房支持",
+    "dv_medical": "家庭暴力医疗支持",
+    "dv_crisis": "家庭暴力危机支持",
+    "dv_mental_health": "家庭暴力帮助心理健康支持",
     "apply": "过滤选项",
     "filters": "过滤"
   },
@@ -342,5 +342,8 @@
     "link_url": "https://bit.ly/bac-interviews",
     "text_sub": "如果你被选为采访对象，所有采访都会远程通过电话或视频的方式进行，并且我们会对你进行有偿补贴。",
     "header": "帮我们为您提供更好的服务。"
+  },
+  "faq": {
+    "title": "住房对家庭暴力的支持"
   }
 }
