@@ -113,7 +113,6 @@
 import BusinessDetails from '@/components/BusinessDetails.vue'
 import { StatusEnum } from '@/components/Results.vue'
 import EditForm from '@/components/EditForm.vue'
-import { needs } from '@/resources/resources.js'
 
 export default {
   name: 'ResultsList',
@@ -220,7 +219,6 @@ export default {
     },
     dvResources() {
       return this.$route.params.need.startsWith('dv')
-
     }
   }
 }
