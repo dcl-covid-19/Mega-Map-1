@@ -137,6 +137,11 @@ export default {
       return markerIcon
     }
   },
+  // computed: {
+  //   geoMarkers() {
+  //     return this.markers.filter((c) => c.lat && c.lon)
+  //   }
+  // },
   watch: {
     resource: function (newResource) {
       if (newResource.isSetByMap || !newResource.resourceId) {

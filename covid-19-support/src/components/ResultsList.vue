@@ -80,6 +80,7 @@
               <span v-if="item.dv_legal == 1" class="badge">{{ $tc('label.dv_legal') }} </span>
               <span v-if="item.dv_referral == 1" class="badge">{{ $tc('label.dv_referral') }} </span>
               <span v-if="item.dv_crisis == 1" class="badge">{{ $tc('label.dv_crisis') }} </span>
+
               <!-- End Badges -->
             </div>
             <i class="fas fa-chevron-right fa-lg" :class="{ 'fa-rotate-90': showDetails && item.cartodb_id == resource.resourceId }"></i>
@@ -112,6 +113,7 @@
 import BusinessDetails from '@/components/BusinessDetails.vue'
 import { StatusEnum } from '@/components/Results.vue'
 import EditForm from '@/components/EditForm.vue'
+import { needs } from '@/resources/resources.js'
 
 export default {
   name: 'ResultsList',
@@ -218,6 +220,7 @@ export default {
     },
     dvResources() {
       return this.$route.params.need.startsWith('dv')
+
     }
   }
 }
@@ -226,7 +229,6 @@ export default {
 .resultWrapper {
   flex: 1 1 100%;
   scrollbar-color: $gray-900 $gray-700;
-  overflow-y: scroll;
   width: 100%;
   z-index: 2000;
   padding: 8px;
@@ -362,5 +364,9 @@ export default {
 
 .modal-footer {
   display: none !important;
+}
+
+.badges {
+  display: inline-block;
 }
 </style>

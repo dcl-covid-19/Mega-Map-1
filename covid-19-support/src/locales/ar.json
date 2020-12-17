@@ -164,5 +164,14 @@
     "what-do-you-need": "ماذا تحتاج؟",
     "when-do-you-need-it": "متى تحتاجها؟"
   },
-  "title": "{0} دعم COVID"
+
+  "title": "{0} دعم COVID",
+  "ux_study": {
+    "text_main": "",
+    "link_text": "",
+    "link_url": "",
+    "text_sub": "",
+    "header": ""
+  }
 }
+

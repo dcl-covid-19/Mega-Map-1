@@ -108,10 +108,9 @@ export const complexFilters = [
   { name: 'safe_pick_up', columns: ['curbside_pickup', 'delivery'], combine: ([a, b]) => a || b }
 ]
 
+
 // CARTO DB VARIABLES
-export const cartoBaseURL =
-  // 'https://mfincker.carto.com/api/v2/sql?api_key=' + process.env.VUE_APP_CARTO_API_KEY
-  'https://dcl-mega-map.carto.com/api/v2/sql?'
+export const cartoBaseURL = 'https://dcl-mega-map.carto.com/api/v2/sql?'
 
 export const cartoDBName = 'airtable'
 

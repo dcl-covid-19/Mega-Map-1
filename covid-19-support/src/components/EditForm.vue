@@ -83,7 +83,7 @@
 </template>
 
 <script>
-import { dayFilters, weekdayHours, seniorDayFilters } from '@/constants'
+import { dayFilters, weekdayHours, seniorDayFilters } from '@/resources/filters.js'
 export default {
   name: 'EditForm',
   props: {
@@ -228,11 +228,3 @@ export default {
   }
 }
 </script>
-
-<style type="text/css">
-#close-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-</style>
