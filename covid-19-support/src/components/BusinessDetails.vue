@@ -38,7 +38,7 @@
           {{ new Date(business.last_update).toLocaleDateString(this.$i18n.locale, { year: 'numeric', month: '2-digit', day: '2-digit' }) }}
         </p>
 
-        <div v-if="this.businessGoogleMapUrl">
+        <div v-if="this.isStreetAddressValid">
           <a class="googleMapsExternalLink" :href="this.businessGoogleMapUrl" target="_blank" rel="noopener noreferrer">
             {{ $t('label.directions_to_store') }}
           </a>
@@ -98,6 +98,12 @@ export default {
         encodeURI(this.business.zip)
 
       return url.replace(/%20/g, '+').toLowerCase()
+    },
+    isStreetAddressValid() {
+      if (!this.business.address) {
+        return false
+      }
+      return true
     }
   }
 }
