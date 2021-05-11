@@ -71,6 +71,10 @@
               <span v-if="item.fin_medical == 1" class="badge">{{ $tc('label.fin_medical') }}</span>
               <span v-if="item.fin_utilities == 1" class="badge">{{ $tc('label.fin_utilities') }}</span>
               <!-- End Badges -->
+              <p class="updated" v-if="item.cartodb_id != resource.resourceId || !showDetails">
+                {{ $tc('label.last_updated') }}:
+                {{ new Date(item.last_update).toLocaleDateString($i18n.locale, { year: 'numeric', month: '2-digit', day: '2-digit' }) }}
+              </p>
             </div>
             <i class="fas fa-chevron-right fa-lg" :class="{ 'fa-rotate-90': showDetails && item.cartodb_id == resource.resourceId }"></i>
           </div>
@@ -352,5 +356,9 @@ export default {
 
 .modal-footer {
   display: none !important;
+}
+
+.updated {
+  color: #aaa;
 }
 </style>
