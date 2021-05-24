@@ -1,7 +1,7 @@
 const CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' && process.env.VUE_APP_DEPLOY == 'GITHUB' ? '/mega-map-dev/' : '/',
+  publicPath: '/',
 
   pluginOptions: {
     i18n: {
