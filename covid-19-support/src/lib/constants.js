@@ -84,7 +84,7 @@ export const complexFilters = [
 ]
 
 // CARTO DB VARIABLES
-export const cartoBaseURL = 'https://dcl-mega-map.carto.com/api/v2/sql?'
+export const cartoBaseURL = 'https://bayareacommunity2.carto.com/api/v2/sql?'
 
 export const cartoDBName = 'airtable'
 
